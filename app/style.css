@@ -1,0 +1,27 @@
+.container2 {
+    margin: 0;
+}
+
+.main, .nav {
+    display: inline-block    
+}
+
+.main {
+    background: white;
+    padding: 10px 20px;    
+    width: 65%;
+    margin: 3px;
+    margin-left: 2%;
+    border-radius: 2px;
+}
+
+.nav2 {
+    width: 20%;  
+    margin: 0;
+    float: right;
+    min-width: 400px;
+}
+
+body {
+    background: #e7e7e7
+}
