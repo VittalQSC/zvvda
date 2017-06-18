@@ -2,9 +2,12 @@
     <div class="panel-heading"> 
         <h3 class="panel-title">
             Schedule {{$ctrl.scheduleName}}
+            <a class="schedule-arrow-down glyphicon glyphicon-arrow-down"
+               href="#"
+               ng-click="$ctrl.toggleArrowBtn($event)"></a>
         </h3> 
     </div> 
-    <div class="panel-body" ng-hide="{{$ctrl.hideSchedule}}"> 
+    <div class="panel-body" ng-hide="$ctrl.hideSchedule"> 
         <ul>
             <li>1</li>
             <li>2</li>
