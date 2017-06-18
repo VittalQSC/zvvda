@@ -2,7 +2,8 @@
     <div class="panel-heading"> 
         <h3 class="panel-title">
             Schedule {{$ctrl.scheduleName}}
-            <a class="schedule-arrow-down glyphicon glyphicon-arrow-down"
+            <a class="schedule-arrow-down glyphicon"
+               ng-class="{'glyphicon-arrow-down': $ctrl.arrowBtnMode == 'down','glyphicon-arrow-up': $ctrl.arrowBtnMode == 'up'}"
                href="#"
                ng-click="$ctrl.toggleArrowBtn($event)"></a>
         </h3> 
