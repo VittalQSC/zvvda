@@ -37,6 +37,10 @@ body {
     background: #e7e7e7
 }
 
-.schedule-arrow-down {
+.schedule-arrow, .schedule-remove {
+    /*float: right;*/
+}
+
+.schedule-toolbar {
     float: right;
 }

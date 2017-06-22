@@ -1,11 +1,16 @@
-<div class="panel panel-info"> 
+<div class="panel panel-info" ng-hide="$ctrl.hideComponent"> 
     <div class="panel-heading"> 
         <h3 class="panel-title">
             Schedule {{$ctrl.scheduleName}}
-            <a class="schedule-arrow-down glyphicon"
-               ng-class="{'glyphicon-arrow-down': $ctrl.arrowBtnMode == 'down','glyphicon-arrow-up': $ctrl.arrowBtnMode == 'up'}"
-               href="#"
-               ng-click="$ctrl.toggleArrowBtn($event)"></a>
+            <span class="schedule-toolbar">
+                <a class="schedule-arrow glyphicon"
+                ng-class="{'glyphicon-arrow-down': $ctrl.arrowBtnMode == 'down','glyphicon-arrow-up': $ctrl.arrowBtnMode == 'up'}"
+                href="#"
+                ng-click="$ctrl.toggleArrowBtn($event)"></a>
+
+                <a href="#" class="schedule-remove glyphicon glyphicon-remove"
+                ng-click="$ctrl.hideComponentBtn($event)"></a>   
+            </span>
         </h3> 
     </div> 
     <div class="panel-body" ng-hide="$ctrl.hideSchedule"> 

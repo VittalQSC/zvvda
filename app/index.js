@@ -5,8 +5,10 @@ import {ngRoute} from 'angular-route';
 import './navbar/navbar.module';
 import './schedule/schedule.module';
 import './mainItem/mainItem.module';
+import './result/result.module';
 import homeRoute from  './routes/home.html'
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem']);
+import resultRoute from  './routes/result.html'
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -18,6 +20,9 @@ app.config(function($routeProvider) {
     })
     .when("/paris", {
         template : "paris.htm",
+    })
+    .when("/result", {
+        template : resultRoute,
     })
     .otherwise({
         template: homeRoute
