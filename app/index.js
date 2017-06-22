@@ -6,9 +6,12 @@ import './navbar/navbar.module';
 import './schedule/schedule.module';
 import './mainItem/mainItem.module';
 import './result/result.module';
+import './resultNavigation/resultNavigation.module';
+import './details/details.module';
 import homeRoute from  './routes/home.html'
 import resultRoute from  './routes/result.html'
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result']);
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 
+'resultNavigation', 'details']);
 
 app.config(function($routeProvider) {
     $routeProvider
