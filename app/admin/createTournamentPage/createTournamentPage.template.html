@@ -1,6 +1,6 @@
 <h2>Create Tournament Page</h2>
-    {{tmp}}
-<form>
+    {{$scope.selected_country}}
+<form ng-submit="$ctrl.onSubmit($event)">
   <div class="form-group">
     <label for="chess-arbiter">Chess Arbiter:</label>
     <input type="chess-arbiter" class="form-control" id="chess-arbiter" ng-model="$ctrl.data.externalUrl">
@@ -30,24 +30,18 @@
     <label for="orginizer">Orginizer:</label>
     <input type="orginizer" class="form-control" id="orginizer" ng-model="$ctrl.data.organizer">
   </div>
-  <!--<div class="form-group">
-    <label for="city">City:</label>
-    <input type="city" class="form-control" id="city">
-  </div>-->
   <div class="form-group">
     <label for="sel1">Country:</label>
-    <select class="form-control" id="sel1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
+    <select class="form-control" id="sel1" ng-model="$ctrl.selected_country" ng-change="$ctrl.updateCities()">
+      <option ng-repeat="country in $ctrl.countries">
+        <span>{{country.name}}</span>
+      </option>
     </select>
     <label for="sel2">City:</label>
-    <select class="form-control" id="sel2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
+    <select class="form-control" id="sel2" ng-model="$ctrl.selected_city">
+      <option ng-repeat="city in $ctrl.cities[$ctrl.selected_country_id]">
+        <span>{{city.name}}</span>
+      </option>
     </select>
   </div>  
   <div class="form-group">
