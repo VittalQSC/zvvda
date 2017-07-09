@@ -1,14 +1,8 @@
 <div ng-app="app">
-    <h2>Title</h2>
+    <h2>Main</h2>
     <ul class='list-inline'>
-        <li>
-            <a class="btn btn-default">A1</a>
-        </li>
-        <li>
-            <a class="btn btn-default">A2</a>
-        </li>
-        <li>
-            <a class="btn btn-default">A3</a>
+        <li ng-repeat="tournament in $ctrl.tournaments">
+            <a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}&groupId={{$ctrl.groupId}}">{{tournament.shortName}}</a>
         </li>
     </ul>
 </div>

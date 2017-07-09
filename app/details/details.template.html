@@ -1,7 +1,24 @@
 <h2>TITLE</h2>
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Tournament details</button>
 <div id="demo" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <div>
+        <strong>Place:</strong>
+        {{$ctrl.tournamentData.city.name}}
+    </div>
+    <div>
+        <strong>Players number:</strong>
+        {{$ctrl.tournamentData.system}}
+    </div>
+    <div>
+        <strong>Current Round:</strong>
+        {{$ctrl.tournamentData.playedRounds + 1}}
+    </div>
+    <div>
+        <strong>Arbiter:</strong>
+        {{$ctrl.tournamentData.arbiter}}
+    </div>
+    <div>
+        <strong>Days:</strong>
+        {{$ctrl.tournamentData.begin + " - " + $ctrl.tournamentData.end}}
+    </div>
 </div>
