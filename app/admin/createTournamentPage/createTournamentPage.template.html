@@ -1,38 +1,39 @@
 <h2>Create Tournament Page</h2>
+    {{tmp}}
 <form>
   <div class="form-group">
     <label for="chess-arbiter">Chess Arbiter:</label>
-    <input type="chess-arbiter" class="form-control" id="chess-arbiter">
-    <button type="button">import<button>
+    <input type="chess-arbiter" class="form-control" id="chess-arbiter" ng-model="$ctrl.data.externalUrl">
+    <button type="button" ng-click="$ctrl.importClick()">import</button>
   </div>  
   <div class="form-group">
-    <label for="tournament-name">Name:</label>
-    <input type="tournament-name" class="form-control" id="tournament-name">
+    <label for="tournament-name">Name: </label>
+    <input type="tournament-name" class="form-control" id="tournament-name" ng-model="$ctrl.data.name">
   </div>
   <div class="form-group">
     <label for="short-tournament-name">Short Name:</label>
-    <input type="short-tournament-name" class="form-control" id="short-tournament-name">
+    <input type="short-tournament-name" class="form-control" id="short-tournament-name" ng-model="$ctrl.data.shortName">
   </div>
   <div class="form-group">
     <label for="start">Start:</label>
-    <datepicker>
-        <input type="text" class="form-control" id="start">
+    <datepicker date-format="yyyy-MM-dd">
+        <input type="text" class="form-control" id="start" ng-model="$ctrl.data.begin">
     </datepicker>
   </div>
   <div class="form-group">
     <label for="end">End:</label>
-    <datepicker>
-        <input type="text" class="form-control" id="end">
+    <datepicker date-format="yyyy-MM-dd">
+        <input type="text" class="form-control" id="end" ng-model="$ctrl.data.end">
     </datepicker>
   </div>
   <div class="form-group">
     <label for="orginizer">Orginizer:</label>
-    <input type="orginizer" class="form-control" id="orginizer">
+    <input type="orginizer" class="form-control" id="orginizer" ng-model="$ctrl.data.organizer">
   </div>
-  <div class="form-group">
+  <!--<div class="form-group">
     <label for="city">City:</label>
     <input type="city" class="form-control" id="city">
-  </div>
+  </div>-->
   <div class="form-group">
     <label for="sel1">Country:</label>
     <select class="form-control" id="sel1">
@@ -51,11 +52,15 @@
   </div>  
   <div class="form-group">
     <label for="round-amount">Round Amount:</label>
-    <input type="round-amount" class="form-control" id="round-amount">
+    <input type="round-amount" class="form-control" id="round-amount" ng-model="$ctrl.data.roundAmount">
   </div>  
   <div class="form-group">
     <label for="curr-round">Current Round:</label>
-    <input type="curr-round" class="form-control" id="curr-round">
+    <input type="curr-round" class="form-control" id="curr-round" ng-model="$ctrl.data.currentRound">
+  </div>  
+  <div class="form-group">
+    <label for="arbiter">Arbiter:</label>
+    <input type="arbiter" class="form-control" id="arbiter" ng-model="$ctrl.data.arbiter">
   </div>  
   <button type="submit" class="btn btn-default">Submit</button>    
 </form>
