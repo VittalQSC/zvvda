@@ -23,6 +23,7 @@ module.exports = {
                 test: /\.html$/, // Only .html files
                 loader: 'html-loader' // Run html loader
             },
+            { test: /\.png$/, loader: "url-loader?mimetype=image/png" },            
                                     
         ]
     },

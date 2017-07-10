@@ -1,8 +1,12 @@
 <div ng-app="app">
-    <h2>Main</h2>
+    <h2>{{$ctrl.header}}</h2>
     <ul class='list-inline'>
-        <li ng-repeat="tournament in $ctrl.tournaments">
-            <a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}">{{tournament.shortName}}</a>
+        <li ng-repeat="item in $ctrl.items">
+            <!--<a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}">-->
+            <a class="btn btn-default" ng-href="{{item.href}}">
+                <span class="ct" ng-class="item.className" ng-show="item.showIcon" ng-src="item.iconSrc"></span>
+                {{item.text}}
+            </a>
         </li>
     </ul>
 </div>
