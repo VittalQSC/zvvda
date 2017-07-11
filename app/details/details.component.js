@@ -5,7 +5,7 @@ export default {
     controller: function ($routeParams, $http) {
       console.log('$routeParams', $routeParams);
       this.tournamentData = {};
-      $http.get('http://localhost:8081/tournaments/' + $routeParams.tournamentId)
+      $http.get('http://server:8081/tournaments/' + $routeParams.tournamentId)
       .then(res => {
         console.log('suc', res);
         this.tournamentData = Object.assign({}, res.data);
