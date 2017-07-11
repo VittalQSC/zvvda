@@ -1,8 +1,12 @@
-import angular from 'angular'
-import createTournamentPageTemplate from './createTournamentPage.template.html'
+import angular from 'angular';
+import createTournamentPageTemplate from './createTournamentPage.template.html';
+// import configs from './../../../../configs/';
+import { configs } from './../../../utils/';
+
 export default {
     template: createTournamentPageTemplate,
     controller: function ($scope, $http) {
+      // console.log('configs',configs);
       this.data = {
         arbiter: null,
         begin: null,
@@ -24,8 +28,8 @@ export default {
 
       this.countries = [];
       this.cities = [];
-      $http.get('http://server:8080/countries').then(res => this.countries = res.data);
-      $http.get('http://server:8080/countries/cities').then(res => this.cities = res.data);
+      $http.get(`http://${configs.host}:${configs.port}/countries`).then(res => this.countries = res.data);
+      $http.get(`http://${configs.host}:${configs.port}/countries/cities`).then(res => this.cities = res.data);
 
       this.selected_country = undefined;
       this.selected_city = undefined;
@@ -37,7 +41,7 @@ export default {
 
       this.importClick = () => {
         const url = this.data.externalUrl;
-        $http.post('http://server:8080/tournaments/link',{"link": url}).then(res => {
+        $http.post(`http://${configs.host}:${configs.port}/tournaments/link`,{"link": url}).then(res => {
           Object.assign(this.data, res.data);
         }, e=>{
           console.log('err', e);
@@ -49,7 +53,7 @@ export default {
         this.data.city = this.cities[this.selected_country_id] && this.cities[this.selected_country_id].length > 0 
                        ? this.cities[this.selected_country_id].filter(city => city.name === this.selected_city.trim())[0] : null;
 
-        $http.post('http://server:8080/tournaments', this.data).then(res => {
+        $http.post(`http://${configs.host}:${configs.port}/tournaments`, this.data).then(res => {
           alert('success!')
         }, () => {});
       }

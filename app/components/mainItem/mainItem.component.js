@@ -1,38 +1,23 @@
-import mainItemTemplate from './mainItem.template.html'
+import mainItemTemplate from './mainItem.template.html';
+import { configs, constants } from './../../utils/';
 export default {
     template: mainItemTemplate,
     bindings: {
      itemType: '=',
     },
     controller: function ($http) {
+      console.log('configs',configs);
       this.groupId = 1;
       this.items = [];
       this.header = '';
       let itemsUrl = '';
       this.$onInit = function() {
-        console.log('itemType', this.itemType);
         switch (this.itemType) {
           case 'countries':
-            const mapCountryToCountryCode = {
-              Belarus: 'by',  
-              Russia: 'ru', 
-              Ukraine: 'ua',  
-              Poland: 'pl', 
-              Netherlands: 'nl',  
-              Italy: 'it',  
-              Czech: 'cz',  
-              Latvia: 'lv', 
-              Lithuania: 'lt',  
-              Azerbaijan: 'az', 
-              Belgium: 'be',  
-              Estonia: 'ee',  
-              Germany: 'de',  
-              Turkey: 'tr', 
-            }
-
+            const mapCountryToCountryCode = constants.mapCountryToCountryCode;
 
             this.header = "Countries"
-            itemsUrl = 'http://server:8080/countries';
+            itemsUrl = `http://${configs.host}:${configs.port}/countries`;
             this.showFlag = true;
             $http.get(itemsUrl)
             .then(res => {
@@ -52,10 +37,9 @@ export default {
         
           default:
             this.header = "Main"
-            itemsUrl = 'http://server:8080/tournaments/groups/' + this.groupId;
+            itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${this.groupId}`;
             $http.get(itemsUrl)
             .then(res => {
-              console.log(res.data);
               const tournaments = res.data;
               this.items = tournaments.map(tournament => {
                 return {

@@ -1,11 +1,12 @@
-import angular from 'angular'
-import detailsTemplate from './details.template.html'
+import angular from 'angular';
+import detailsTemplate from './details.template.html';
+import { configs } from './../../utils/';
 export default {
     template: detailsTemplate,
     controller: function ($routeParams, $http) {
       console.log('$routeParams', $routeParams);
       this.tournamentData = {};
-      $http.get('http://server:8080/tournaments/' + $routeParams.tournamentId)
+      $http.get(`http://${configs.host}:${configs.port}/tournaments/${$routeParams.tournamentId}`)
       .then(res => {
         console.log('suc', res);
         this.tournamentData = Object.assign({}, res.data);

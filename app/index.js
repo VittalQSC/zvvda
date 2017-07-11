@@ -1,18 +1,18 @@
 window.jQuery = require('jquery');
 import './style.css';
-import './static/css/flags.css';
+import './../static/css/flags.css';
 import angular from 'angular';
 import './../node_modules/angularjs-datepicker/src/css/angular-datepicker.css';
 import 'angularjs-datepicker';
 import {ngRoute} from 'angular-route';
-import './navbar/navbar.module';
-import './schedule/schedule.module';
-import './mainItem/mainItem.module';
-import './result/result.module';
-import './resultNavigation/resultNavigation.module';
-import './details/details.module';
-import './regulations/regulations.module';
-import './admin/createTournamentPage/createTournamentPage.module';
+import './components/navbar/navbar.module';
+import './components/schedule/schedule.module';
+import './components/mainItem/mainItem.module';
+import './components/result/result.module';
+import './components/resultNavigation/resultNavigation.module';
+import './components/details/details.module';
+import './components/regulations/regulations.module';
+import './components/admin/createTournamentPage/createTournamentPage.module';
 import homeRoute from  './routes/home.html'
 import resultRoute from  './routes/result.html'
 import regulationsRoute from  './routes/regulations.html'

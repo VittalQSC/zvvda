@@ -1,11 +1,12 @@
 import angular from 'angular'
 import resultTemplate from './result.template.html'
+import { configs } from './../../utils/';
 export default {
     template: resultTemplate,
     controller: function ($routeParams, $http) {
       console.log('$routeParams', $routeParams);
       this.players = [];
-      $http.get('http://server:8080/tournaments/' + $routeParams.tournamentId)
+      $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{
         console.log('sucRes', res)
         this.players = res.data.players
