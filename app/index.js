@@ -20,7 +20,8 @@ import adminRoute from  './routes/admin.html'
 const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
     $routeProvider
     .when("/", {
         template : homeRoute
