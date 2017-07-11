@@ -32,7 +32,7 @@ export default {
 
 
             this.header = "Countries"
-            itemsUrl = 'http://server:8081/countries';
+            itemsUrl = 'http://server:8080/countries';
             this.showFlag = true;
             $http.get(itemsUrl)
             .then(res => {
@@ -52,7 +52,7 @@ export default {
         
           default:
             this.header = "Main"
-            itemsUrl = 'http://server:8081/tournaments/groups/' + this.groupId;
+            itemsUrl = 'http://server:8080/tournaments/groups/' + this.groupId;
             $http.get(itemsUrl)
             .then(res => {
               console.log(res.data);
