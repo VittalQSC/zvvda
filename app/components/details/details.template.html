@@ -3,23 +3,23 @@
     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Tournament details</button>
     <div id="demo" class="collapse">
         <div>
-            <strong>Place:</strong>
+            <strong>{{$ctrl.Place | translate}}:</strong>
             {{$ctrl.tournamentData.city.name}}
         </div>
         <div>
-            <strong>Players number:</strong>
+            <strong>{{$ctrl.Players_number | translate}}:</strong>
             {{$ctrl.tournamentData.system}}
         </div>
         <div>
-            <strong>Current Round:</strong>
+            <strong>{{$ctrl.Current_Round | translate}}:</strong>
             {{$ctrl.tournamentData.playedRounds + 1}}
         </div>
         <div>
-            <strong>Arbiter:</strong>
+            <strong>{{$ctrl.Arbiter | translate}}:</strong>
             {{$ctrl.tournamentData.arbiter}}
         </div>
         <div>
-            <strong>Days:</strong>
+            <strong>{{$ctrl.Days | translate}}:</strong>
             {{$ctrl.tournamentData.begin + " - " + $ctrl.tournamentData.end}}
         </div>
     </div>
