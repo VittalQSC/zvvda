@@ -6,5 +6,9 @@
     "PLAYER":"Игрок",
     "RATING":"Рейтинг",
     "TITLE":"Звание",
-    "COUNTRY":"Страна"          
+    "COUNTRY":"Страна",
+
+    "19th_European_Youth_Championship": "19-ый Молодежный Чемпионат Европы",
+    "Welcome_to_the_European_Youth_Championship": "Добро пожаловать на Молодежный Чемпионат Европы!",
+    "There_will_be_more_information_soon_on_this_site":  "В скором времени на сайте появится больше информации."              
 }

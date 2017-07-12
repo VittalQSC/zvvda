@@ -9,6 +9,7 @@ import './components/navbar/navbar.module';
 import './components/schedule/schedule.module';
 import './components/mainItem/mainItem.module';
 import './components/result/result.module';
+import './components/greeting/greeting.module';
 import './components/resultNavigation/resultNavigation.module';
 import './components/details/details.module';
 import './components/regulations/regulations.module';
@@ -21,7 +22,7 @@ import adminRoute from  './routes/admin.html'
 import 'angular-translate';
 
 
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 'greeting', 
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app

@@ -6,5 +6,9 @@
     "PLAYER":"Player",
     "RATING":"Rating",
     "TITLE":"Title",
-    "COUNTRY":"Country"   
+    "COUNTRY":"Country",
+
+    "19th_European_Youth_Championship": "19th European Youth Championship",
+    "Welcome_to_the_European_Youth_Championship": "Welcome to the European Youth Championship! ",
+    "There_will_be_more_information_soon_on_this_site":  "There will be more information soon on this site."      
 }
