@@ -1,5 +1,9 @@
 {
     "EYC_DRAUGHTS_2017": "EYC Draughts 2017",
     "RESULTS": "Results",
-    "REGULATIONS": "Regulations"    
+    "REGULATIONS": "Regulations",
+"PLAYER":"Player",
+"RATING":"Rating",
+"TITLE":"Title",
+"COUNTRY":"Country"    
 }

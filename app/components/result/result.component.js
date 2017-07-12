@@ -1,10 +1,17 @@
 import angular from 'angular'
 import resultTemplate from './result.template.html'
-import { configs } from './../../utils/';
+import { configs, translationManager } from './../../utils/';
 export default {
     template: resultTemplate,
-    controller: function ($routeParams, $http) {
-      console.log('$routeParams', $routeParams);
+    controller: function ($routeParams, $http, $translate) {
+      translationManager.subscribe($translate);
+      Object.assign(this, {
+        player: "PLAYER",
+        rating: "RATING",
+        title: "TITLE",
+        country: "COUNTRY"
+      });
+
       this.players = [];
       $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{

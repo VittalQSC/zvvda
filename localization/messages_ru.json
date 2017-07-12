@@ -1,5 +1,10 @@
 {
     "EYC_DRAUGHTS_2017": "МЧЕ 2017 по шашкам-100",
     "RESULTS": "Результаты",
-    "REGULATIONS": "Регламент"    
+    "REGULATIONS": "Регламент",
+
+    "PLAYER":"Игрок",
+    "RATING":"Рейтинг",
+    "TITLE":"Звание",
+    "COUNTRY":"Страна"          
 }

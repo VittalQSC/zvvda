@@ -1,10 +1,10 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Player</th>
-        <th>Rating</th>
-        <th>Title</th>
-        <th>Country</th>
+        <th>{{$ctrl.player | translate}}</th>
+        <th>{{$ctrl.rating | translate}}</th>
+        <th>{{$ctrl.title | translate}}</th>
+        <th>{{$ctrl.country | translate}}</th>
     </tr>
     <tr ng-repeat="player in $ctrl.players">
         <td>{{player.sortNumber}}</td>  

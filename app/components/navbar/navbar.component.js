@@ -5,6 +5,7 @@ export default {
     template: navbarTemplate,
     // controller: function ($translateProvider) {
     controller: function ($translate) {
+      translationManager.subscribe($translate);
       // console.log($translateProvider);
 
       this.title = "EYC_DRAUGHTS_2017";
