@@ -6,7 +6,6 @@ export default {
      itemType: '=',
     },
     controller: function ($http) {
-      console.log('configs',configs);
       this.groupId = 1;
       this.items = [];
       this.header = '';

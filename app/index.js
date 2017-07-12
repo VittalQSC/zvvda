@@ -17,10 +17,15 @@ import homeRoute from  './routes/home.html'
 import resultRoute from  './routes/result.html'
 import regulationsRoute from  './routes/regulations.html'
 import adminRoute from  './routes/admin.html'
+
+import 'angular-translate';
+
+
 const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
-app.config(function($routeProvider, $qProvider) {
+app
+.config(function($routeProvider, $qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
     $routeProvider
     .when("/", {
@@ -34,7 +39,7 @@ app.config(function($routeProvider, $qProvider) {
     })
     .when("/admin", {
         template : adminRoute,
-    })
+    }) 
     .otherwise({
         template: homeRoute
     });
