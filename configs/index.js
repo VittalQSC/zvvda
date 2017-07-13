@@ -1,4 +1,4 @@
 export default {
-    host: 'localhost',
-    port: '8081',
+    host: window.location.hostname,
+    port: window.location.hostname === "localhost" ? '8081' : '8080',
 }
