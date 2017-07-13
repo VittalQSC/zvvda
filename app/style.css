@@ -66,3 +66,7 @@ body {
 .item {
     margin: 5px 0;
 }
+
+#bs-example-navbar-collapse-1 .locale-btn {
+    padding: 6px 6px 0 3px;
+}
