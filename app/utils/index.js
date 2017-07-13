@@ -6,9 +6,8 @@ import utilsLocalizationMessagesEn from './../../localization/messages_en.json';
 import utilsLocalizationMessagesRu from './../../localization/messages_ru.json';
 import utilsLocalizationMessagesBe from './../../localization/messages_be.json';
 
-// import './../../static/css/flags.css';
 // import flagsImg from './../../static/flags/flags.png';
-// import './../../static/css/big_flags.css';
+
 // import bigFlagsImg from './../../static/flags/big_flags.png';
 
 import { TranslationManager } from './TranslationManager'

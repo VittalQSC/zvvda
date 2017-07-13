@@ -70,3 +70,9 @@ body {
 #bs-example-navbar-collapse-1 .locale-btn {
     padding: 6px 6px 0 3px;
 }
+
+.partners {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
