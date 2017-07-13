@@ -1,6 +1,7 @@
 window.jQuery = require('jquery');
 import './style.css';
 import './../static/css/flags.css';
+import './../static/css/big_flags.css';
 import angular from 'angular';
 import './../node_modules/angularjs-datepicker/src/css/angular-datepicker.css';
 import 'angularjs-datepicker';

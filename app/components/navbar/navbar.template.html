@@ -20,9 +20,21 @@
         <li><a href="#">Link</a></li>-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'ru')">Ru</a></li>
-        <li><a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'en')">Eng</a></li>
-        <li><a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'be')">Bel</a></li>
+        <li>
+          <a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'ru')">
+           <span class="flagB flagB-ru"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'en')">
+            <span class="flagB flagB-gb"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#!" ng-click="$ctrl.onChangeLangClick($event, 'be')">
+            <span class="flagB flagB-by"></span>
+          </a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

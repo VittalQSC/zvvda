@@ -1,5 +1,5 @@
 import mainItemTemplate from './mainItem.template.html';
-import { configs, constants } from './../../utils/';
+import { configs, constants, imgs } from './../../utils/';
 export default {
     template: mainItemTemplate,
     bindings: {
@@ -25,7 +25,6 @@ export default {
               this.items = countries.map(country => {
                 return {
                   showIcon: true,
-                  iconSrc: "./../static/flags/flags.png",
                   className: `flag flag-${mapCountryToCountryCode[country.name]}`,
                   href: "#!/",
                   text: country.name

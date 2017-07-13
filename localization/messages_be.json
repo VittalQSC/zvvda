@@ -1,21 +1,21 @@
 {
-    "EYC_DRAUGHTS_2017": "EYC Draughts 2017",
-    "RESULTS": "Results",
-    "REGULATIONS": "Regulations",
+    "EYC_DRAUGHTS_2017": "МЧЕ 2017 па шашках-100",
+    "RESULTS": "Вынікі",
+    "REGULATIONS": "Рэгламент",
 
-    "PLAYER":"Player",
-    "RATING":"Rating",
-    "TITLE":"Title",
-    "COUNTRY":"Country",
+    "PLAYER": "Гулец",
+    "RATING": "Рэйтынг",
+    "TITLE": "Званне",
+    "COUNTRY": "Краіна",
 
-    "19th_European_Youth_Championship": "19th European Youth Championship",
-    "Welcome_to_the_European_Youth_Championship": "Welcome to the European Youth Championship! ",
-    "There_will_be_more_information_soon_on_this_site":  "There will be more information soon on this site.",
+    "19th_European_Youth_Championship": "19-ы Маладзёвы Чэмпіянат Еўропы",
+    "Welcome_to_the_European_Youth_Championship": "Вітаем на Маладзевым Чэмпіянаце Еўропы ў г. Віцебск, Беларусь! ",
+    "There_will_be_more_information_soon_on_this_site":  "У хуткім часе на сайце з’явіцца больш інфармацыі.",
 
-    "Tournament_details": "Tournament details",
-    "Place": "Place",
-    "Players_number": "Players number",
-    "Current_Round": "Current Round",
-    "Arbiter": "Arbiter",   
-    "Days": "Days"           
+    "Tournament_details": "Падрабязнасці турніра",
+    "Place": "Месца правядзення",
+    "Players_number": "Колькасць гульцоў",
+    "Current_Round": "Цяперашні тур",
+    "Arbiter": "Суддзя",   
+    "Days": "Дні правядзення"           
 }
