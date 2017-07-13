@@ -19,7 +19,7 @@
 }
 
 .main {
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 10px 20px;    
     background: white;
     width: 100%;
@@ -28,8 +28,10 @@
 }
 
 .nav2 {
+    background: white;
+    padding: 20px;
     width: 20%;  
-    margin: 0;
+    margin: 10px 0;
     float: right;
     min-width: 400px;
 }
