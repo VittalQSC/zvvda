@@ -76,3 +76,17 @@ body {
     justify-content: space-around;
     flex-wrap:wrap;
 }
+
+.info-partner-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap:wrap; 
+    align-items: center;
+
+}
+
+.info-partner-container strong { 
+    font-size: 11px; 
+
+}
