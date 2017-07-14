@@ -18,5 +18,14 @@
     "Current_Round": "Current Round",
     "Arbiter": "Arbiter",   
     "Days": "Days",
-    "Informational_partner": "Informational partner"        
+    "Informational_partner": "Informational partner",
+
+    "Statistics": "Statistics",
+    "BEGIN_DATE": "Begin date",
+    "END_DATE": "End date",
+    "TOURNAMENT_NAME": "Tournament name",
+    "PTS": "Pts",
+    "WINS": "Wins",
+    "LOSSES": "Losses",
+    "DRAWS" : "Draws"          
 }

@@ -1,0 +1,33 @@
+<div>
+    <h2>
+        <strong>
+        {{($ctrl.player.surname || '') + " " + ($ctrl.player.name || '') + " " + ($ctrl.player.secondName || '')}}
+        </strong>
+    </h2>
+
+    <strong>{{"Statistics" | translate}}</strong>
+    <table class="table table-bordered">
+        <tr>
+            <!--<th>#</th>-->
+            <th>{{"BEGIN_DATE" | translate}}</th>
+            <th>{{"END_DATE" | translate}}</th>
+            <th>{{"TOURNAMENT_NAME" | translate}}</th>
+            <th>{{"Place" | translate}}</th>
+            <th>{{"PTS" | translate}}</th>
+            <th>{{"WINS" | translate}}</th>
+            <th>{{"LOSSES" | translate}}</th>
+            <th>{{"DRAWS" | translate}}</th>
+        </tr>
+        <tr ng-repeat="tournament in $ctrl.tournaments">
+            <!--<td>{{""}}</td>  -->
+            <td>{{tournament.begin || "-"}}</td>  
+            <td>{{tournament.end || "-"}}</td>  
+            <td>{{tournament.name || "-"}}</td>  
+            <td>{{tournament.place || "-"}}</td>  
+            <td>{{tournament.points || "-"}}</td>  
+            <td>{{tournament.wins || "-"}}</td>  
+            <td>{{tournament.loses || "-"}}</td>  
+            <td>{{tournament.draws || "-"}}</td>  
+        </tr>
+    </table>    
+</div>

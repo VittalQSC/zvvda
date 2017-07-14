@@ -10,6 +10,7 @@ import './components/navbar/navbar.module';
 import './components/schedule/schedule.module';
 import './components/mainItem/mainItem.module';
 import './components/result/result.module';
+import './components/player/player.module';
 import './components/greeting/greeting.module';
 import './components/partners/partners.module';
 import './components/resultNavigation/resultNavigation.module';
@@ -20,11 +21,12 @@ import homeRoute from  './routes/home.html'
 import resultRoute from  './routes/result.html'
 import regulationsRoute from  './routes/regulations.html'
 import adminRoute from  './routes/admin.html'
+// import playerRoute from  './routes/admin.html'
 
 import 'angular-translate';
 
 
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 'greeting', 'partners',
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 'greeting', 'partners', 'player',
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
@@ -42,6 +44,14 @@ app
     })
     .when("/admin", {
         template : adminRoute,
+    }) 
+    .when("/players/:id", {
+        template : "<player player-id='ctrl.id'></player>",
+        controller: function ($routeParams) {
+            console.log('$routeParams', $routeParams);
+            this.id = $routeParams.id;
+        },
+        controllerAs: 'ctrl' 
     }) 
     .otherwise({
         template: homeRoute

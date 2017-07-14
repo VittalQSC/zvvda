@@ -18,5 +18,14 @@
     "Current_Round": "Цяперашні тур",
     "Arbiter": "Суддзя",   
     "Days": "Дні правядзення",
-    "Informational_partner": "Інфармацыйны партнёр"          
+    "Informational_partner": "Інфармацыйны партнёр",
+
+    "Statistics": "Статыстыка",
+    "BEGIN_DATE": "Дата пачатку",
+    "END_DATE": "Дата завяршэння",
+    "TOURNAMENT_NAME": "Назва турніра",
+    "PTS": "Ачкі",
+    "WINS": "Перамогі",
+    "LOSSES": "Паразы",
+    "DRAWS" : "Нычыі"            
 }
