@@ -27,6 +27,9 @@
     "PTS": "Pts",
     "WINS": "Wins",
     "LOSSES": "Losses",
-    "DRAWS" : "Draw"   
+    "DRAWS" : "Draw",
+    
+    "BIRTH_DATE": "Birth Date",
+    "RANK": "Rank"
 
 }

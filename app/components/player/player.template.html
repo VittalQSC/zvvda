@@ -1,10 +1,51 @@
 <div>
     <h2>
         <strong>
-        {{($ctrl.player.surname || '') + " " + ($ctrl.player.name || '') + " " + ($ctrl.player.secondName || '')}}
+            {{
+                ($ctrl.player.surname || '') + 
+                " " + ($ctrl.player.name || '') + 
+                " " + ($ctrl.player.secondName || '')
+            }}
         </strong>
+        <span class="ct" ng-class="'flag flag-' + $ctrl.countryCode"></span>
     </h2>
+    <div>
 
+        <table  class="player-info table table-bordered">
+            <tr>
+                <th>{{"BIRTH_DATE" | translate}}</th>
+                <td>{{$ctrl.player.birthday}}</td>
+            </tr>
+            <tr>
+                <th>{{"RANK" | translate}}</th>
+                <td>{{$ctrl.player.rank}}</td>
+            </tr>
+            <tr>
+                <th>{{"RATING" | translate}}</th>
+                <td>{{$ctrl.player.rating}}</td>
+            </tr>
+            <tr>
+                <th>{{"COUNTRY" | translate}}</th>
+                <td>
+                    <span class="ct" ng-class="'flag flag-' + $ctrl.countryCode"></span>
+                    {{$ctrl.player.country.name}}
+                </td>
+            </tr>
+        </table>    
+        <span>
+            <strong>{{"Team" | translate}}</strong>
+            <table class="team-info table table-bordered">
+                <tr>
+                    <th>{{"TOURNAMENT_NAME" | translate}}</th>
+                    <th>{{"PTS" | translate}}</th>
+                </tr>
+                <tr ng-repeat="teamClassification in $ctrl.teamClassifications">
+                    <td>{{teamClassification.name}}</td>
+                    <td>{{teamClassification.points}}</td>
+                </tr>
+            </table>
+        </span>
+    </div>
     <strong>{{"Statistics" | translate}}</strong>
     <table class="table table-bordered">
         <tr>
