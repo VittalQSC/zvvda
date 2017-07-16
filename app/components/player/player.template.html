@@ -10,29 +10,33 @@
         <span class="ct" ng-class="'flag flag-' + $ctrl.countryCode"></span>
     </h2>
     <div>
+        <span class="player-info-container">
+            <strong>{{"Information" | translate}}</strong>
+            <table class="player-info table table-bordered">
+                    <tr>
+                        <th>{{"BIRTH_DATE" | translate}}</th>
+                        <td>{{$ctrl.player.birthday}}</td>
+                    </tr>
+                    <tr>
+                        <th>{{"RANK" | translate}}</th>
+                        <td>{{$ctrl.player.rank}}</td>
+                    </tr>
+                    <tr>
+                        <th>{{"RATING" | translate}}</th>
+                        <td>{{$ctrl.player.rating}}</td>
+                    </tr>
+                    <tr>
+                        <th>{{"COUNTRY" | translate}}</th>
+                        <td>
+                            <span class="ct" ng-class="'flag flag-' + $ctrl.countryCode"></span>
+                            {{$ctrl.player.country.name}}
+                        </td>
+                    </tr>
+                </table>             
+        </span>
 
-        <table  class="player-info table table-bordered">
-            <tr>
-                <th>{{"BIRTH_DATE" | translate}}</th>
-                <td>{{$ctrl.player.birthday}}</td>
-            </tr>
-            <tr>
-                <th>{{"RANK" | translate}}</th>
-                <td>{{$ctrl.player.rank}}</td>
-            </tr>
-            <tr>
-                <th>{{"RATING" | translate}}</th>
-                <td>{{$ctrl.player.rating}}</td>
-            </tr>
-            <tr>
-                <th>{{"COUNTRY" | translate}}</th>
-                <td>
-                    <span class="ct" ng-class="'flag flag-' + $ctrl.countryCode"></span>
-                    {{$ctrl.player.country.name}}
-                </td>
-            </tr>
-        </table>    
-        <span>
+          
+        <span class="team-info-container">
             <strong>{{"Team" | translate}}</strong>
             <table class="team-info table table-bordered">
                 <tr>

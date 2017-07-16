@@ -94,3 +94,16 @@ body {
 /* .team-info, .player-info {
     display: inline;
 } */
+
+.player-info {
+     width: 500px;
+}
+
+.team-info-container, .player-info-container {
+    display: inline-block;
+    margin: 5px;
+}
+
+.team-info {
+    width: 200px;
+}

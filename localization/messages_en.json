@@ -30,6 +30,8 @@
     "DRAWS" : "Draws",
     
     "BIRTH_DATE": "Birth Date",
-    "RANK": "Rank"
+    "RANK": "Rank",
+    "Team": "Team",
+    "Information": "Information"
           
 }
