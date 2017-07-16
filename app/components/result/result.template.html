@@ -15,6 +15,9 @@
         </td>  
         <td>{{player.header.rating}}</td>  
         <td>{{player.header.rank}}</td>  
-        <td>{{player.header.country.name}}</td>  
+        <td>
+            <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
+            {{player.header.country.name}}
+        </td>  
     </tr>
 </table>

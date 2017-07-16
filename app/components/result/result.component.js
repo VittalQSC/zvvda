@@ -1,6 +1,6 @@
 import angular from 'angular'
 import resultTemplate from './result.template.html'
-import { configs, translationManager } from './../../utils/';
+import { configs, constants, translationManager } from './../../utils/';
 export default {
     template: resultTemplate,
     controller: function ($routeParams, $http, $translate) {
@@ -11,7 +11,7 @@ export default {
         title: "TITLE",
         country: "COUNTRY"
       });
-
+      this.mapCountryToCountryCode = constants.mapCountryToCountryCode;
       this.players = [];
       $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{
