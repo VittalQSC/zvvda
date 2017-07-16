@@ -8,7 +8,11 @@
     </tr>
     <tr ng-repeat="player in $ctrl.players">
         <td>{{player.sortNumber}}</td>  
-        <td>{{(player.header.surname || '') + " " + (player.header.name || '')}}</td>  
+        <td>
+            <a ng-href="{{'#!/players/' + player.header.id}}">
+                {{(player.header.surname || '') + " " + (player.header.name || '')}}
+            </a>
+        </td>  
         <td>{{player.header.rating}}</td>  
         <td>{{player.header.rank}}</td>  
         <td>{{player.header.country.name}}</td>  
