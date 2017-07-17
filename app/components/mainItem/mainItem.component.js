@@ -38,7 +38,7 @@ export default {
             itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${this.groupId}`;
             $http.get(itemsUrl)
             .then(res => {
-              const tournaments = res.data;
+              const tournaments = res.data.tournaments;
               this.items = tournaments.map(tournament => {
                 return {
                   showIcon: false,
