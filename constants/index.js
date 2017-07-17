@@ -14,5 +14,10 @@ export default {
               Estonia: 'ee',  
               Germany: 'de',  
               Turkey: 'tr', 
-            }
+            },
+    mapTournamentStatus: {
+      FUTURE: 'Future',
+      IN_PROGRESS: 'In_progress',
+      FINISHED: 'Finished',
+    }        
 }

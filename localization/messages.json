@@ -32,6 +32,10 @@
     "BIRTH_DATE": "Birth Date",
     "RANK": "Rank",
     "Team": "Team",
-    "Information": "Information"
+    "Information": "Information",
+
+    "Future": "Future",
+    "In_progress": "In progress",
+    "Finished": "Finished"
 
 }

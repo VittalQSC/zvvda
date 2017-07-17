@@ -1,5 +1,11 @@
 <div ng-app="app">
-    <h2>{{$ctrl.header}}</h2>
+    <h2>
+        {{$ctrl.header}}
+        <small>
+            {{"(" + $ctrl.group.start + " — " + $ctrl.group.end + ")"}}
+        </small>
+        <span class="label label-default">{{$ctrl.status | translate}}</span>
+    </h2>
     <ul class='list-inline items'>
         <li ng-repeat="item in $ctrl.items" class="item">
             <!--<a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}">-->

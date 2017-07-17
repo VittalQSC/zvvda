@@ -32,5 +32,9 @@
     "BIRTH_DATE": "Дата Рождения",
     "RANK": "Звание",
     "Team": "Команда",
-    "Information": "Информация"                  
+    "Information": "Информация",
+
+    "Future": "Будущий",
+    "In_progress": "В процессе",
+    "Finished": "Завершен"                  
 }

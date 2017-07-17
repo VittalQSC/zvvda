@@ -1,11 +1,12 @@
 import mainItemTemplate from './mainItem.template.html';
-import { configs, constants, imgs } from './../../utils/';
+import { configs, constants, imgs, translationManager } from './../../utils/';
 export default {
     template: mainItemTemplate,
     bindings: {
      itemType: '=',
     },
-    controller: function ($http) {
+    controller: function ($http, $translate) {
+      translationManager.subscribe($translate);
       this.groupId = 1;
       this.items = [];
       this.header = '';
@@ -34,11 +35,24 @@ export default {
             break;
         
           default:
-            this.header = "Main"
+            const mapLang = {
+              en: "nameEn",
+              ru: "nameRu",
+              be: "nameBy"
+            } 
+            this.status = constants.mapTournamentStatus["FUTURE"];
+            this.group = {}; 
+            window.addEventListener('locale-changed', e => {
+              this.header = this.group[mapLang[translationManager.currLocale]]
+            })
+
             itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${this.groupId}`;
             $http.get(itemsUrl)
             .then(res => {
               const tournaments = res.data.tournaments;
+              this.group = res.data.group;
+              this.header = res.data.group[mapLang[translationManager.currLocale]];
+              this.status = constants.mapTournamentStatus[this.group.status];
               this.items = tournaments.map(tournament => {
                 return {
                   showIcon: false,

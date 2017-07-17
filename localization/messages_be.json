@@ -3,7 +3,7 @@
     "RESULTS": "Вынікі",
     "REGULATIONS": "Рэгламент",
 
-    "PLAYER": "Гулец",
+    "PLAYER": "Удзельнік",
     "RATING": "Рэйтынг",
     "TITLE": "Званне",
     "COUNTRY": "Краіна",
@@ -32,6 +32,10 @@
     "BIRTH_DATE": "Дата Нараджэння",
     "RANK": "Званне",
     "Team": "Каманда",
-    "Information": "Інфармацыя"
+    "Information": "Інфармацыя",
+
+    "Future": "Будучы",
+    "In_progress": "У працэсе",
+    "Finished": "Завершаны"
             
 }

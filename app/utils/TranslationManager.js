@@ -3,6 +3,7 @@ export class TranslationManager {
         this.currLocale = "en";
         this.locale = locale;
 
+        this.variables = [];
         this.$translateSubscribers = [];
     }
 
@@ -34,7 +35,11 @@ export class TranslationManager {
 
     setCurrLocale (locale, $translate) {
         this.currLocale = locale;
-        // $translate.use(locale);
         this.update();
+        window.dispatchEvent(new CustomEvent('locale-changed',{locale}))
+    }
+
+    extendLocale (newLocale) {
+        Object.assign(this.locale, newLocale);
     }
 };
