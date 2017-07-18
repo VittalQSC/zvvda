@@ -35,15 +35,10 @@ export default {
             break;
         
           default:
-            const mapLang = {
-              en: "nameEn",
-              ru: "nameRu",
-              be: "nameBy"
-            } 
             this.status = constants.mapTournamentStatus["FUTURE"];
             this.group = {}; 
             window.addEventListener('locale-changed', e => {
-              this.header = this.group[mapLang[translationManager.currLocale]]
+              this.header = this.group[constants.mapLang[translationManager.currLocale]]
             })
 
             itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${this.groupId}`;
@@ -51,7 +46,7 @@ export default {
             .then(res => {
               const tournaments = res.data.tournaments;
               this.group = res.data.group;
-              this.header = res.data.group[mapLang[translationManager.currLocale]];
+              this.header = res.data.group[constants.mapLang[translationManager.currLocale]];
               this.status = constants.mapTournamentStatus[this.group.status];
               this.items = tournaments.map(tournament => {
                 return {

@@ -36,6 +36,8 @@
 
     "Future": "Future",
     "In_progress": "In progress",
-    "Finished": "Finished"
+    "Finished": "Finished",
+
+    "Schedule": "Schedule"
 
 }

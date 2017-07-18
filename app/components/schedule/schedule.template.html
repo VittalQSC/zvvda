@@ -1,7 +1,16 @@
 <div class="panel panel-info" ng-hide="$ctrl.hideComponent"> 
-    <div class="panel-heading"> 
+    <div class="panel-heading schedule-panel-header"> 
         <h3 class="panel-title">
-            Schedule {{$ctrl.scheduleName}}
+            {{'Schedule'| translate}}
+            <span>
+                <a class="schedule-arrow glyphicon"
+                ng-class="'glyphicon glyphicon-chevron-left'"
+                href="#"
+                ng-click="$ctrl.prevDate($event)"></a>
+                {{$ctrl.currEvent.date}}
+                <a href="#" class="glyphicon glyphicon-chevron-right"
+                ng-click="$ctrl.nextDate($event)"></a>            
+            </span>
             <span class="schedule-toolbar">
                 <a class="schedule-arrow glyphicon"
                 ng-class="{'glyphicon-arrow-down': $ctrl.arrowBtnMode == 'down','glyphicon-arrow-up': $ctrl.arrowBtnMode == 'up'}"
@@ -15,10 +24,12 @@
     </div> 
     <div class="panel-body" ng-hide="$ctrl.hideSchedule"> 
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            <li ng-repeat="event in $ctrl.currEvent.events">
+                <h4>
+                    {{$ctrl.currEventNames[$index]}} 
+                     <small>{{$ctrl.currEvent.events[$index].start | date:'yyyy-MM-dd HH:mm:ss'}}</small> 
+                </h4>
+            </li>
         </ul>    
     </div> 
 </div>

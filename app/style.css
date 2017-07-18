@@ -107,3 +107,11 @@ body {
 .team-info {
     width: 200px;
 }
+
+.schedule-panel-header {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap:wrap; 
+    /* align-items: center;     */
+}
