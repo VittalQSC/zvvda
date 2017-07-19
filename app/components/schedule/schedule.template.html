@@ -27,7 +27,7 @@
             <li ng-repeat="event in $ctrl.currEvent.events">
                 <h4>
                     {{$ctrl.currEventNames[$index]}} 
-                     <small>{{$ctrl.currEvent.events[$index].start | date:'yyyy-MM-dd HH:mm:ss'}}</small> 
+                     <small>{{$ctrl.currEvent.events[$index].start | date:'HH:mm'}}</small> 
                 </h4>
             </li>
         </ul>    
