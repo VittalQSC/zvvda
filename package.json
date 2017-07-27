@@ -17,11 +17,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
     "expose-loader": "^0.7.3",
+    "file-loader": "^0.11.2",
     "html-loader": "^0.4.5",
     "image-webpack-loader": "^3.3.1",
     "imports-loader": "^0.7.1",
     "json-loader": "^0.5.4",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
@@ -32,6 +34,7 @@
     "angular-translate": "^2.15.2",
     "angularjs-datepicker": "^2.1.23",
     "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "uglifyjs-webpack-plugin": "^0.4.6"
   }
 }
