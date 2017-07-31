@@ -1,3 +1,4 @@
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: ["./app/index.js"],
     output: {
@@ -27,6 +28,9 @@ module.exports = {
                                     
         ]
     },
-    devtool: "#inline-source-map"
+    devtool: "#inline-source-map",
+    plugins: [
+        new UglifyJSPlugin()
+    ]    
     
 };

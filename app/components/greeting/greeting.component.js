@@ -1,9 +1,8 @@
 import angular from 'angular'
 import greetingTemplate from './greeting.template.html'
 import { translationManager } from './../../utils/';
-export default {
-    template: greetingTemplate,
-    controller: function ($routeParams, $http, $translate) {
+
+let greetingController = function ($routeParams, $http, $translate) {
       translationManager.subscribe($translate);
       Object.assign(this, {
         European_Youth_Championship: "19th_European_Youth_Championship",
@@ -12,7 +11,12 @@ export default {
       });
 
 
-    }
+    };
+greetingController.$inject = ["$routeParams", "$http", "$translate"];
+
+export default {
+    template: greetingTemplate,
+    controller: greetingController
 
   }
 

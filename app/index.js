@@ -25,12 +25,17 @@ import adminRoute from  './routes/admin.html'
 
 import 'angular-translate';
 
+var $injector = angular.injector();
 
 const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 'greeting', 'partners', 'player',
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
-.config(function($routeProvider, $qProvider) {
+.config(['$routeProvider', '$qProvider',function($routeProvider, $qProvider) {
+// .config(function() {
+    // const $routeProvider = $injector.get('$routeProvider'), 
+    //       $qProvider = $injector.get('$qProvider');
+
     $qProvider.errorOnUnhandledRejections(false);
     $routeProvider
     .when("/", {
@@ -56,4 +61,4 @@ app
     .otherwise({
         template: homeRoute
     });
-});
+}]);

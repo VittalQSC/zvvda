@@ -1,11 +1,7 @@
 import mainItemTemplate from './mainItem.template.html';
 import { configs, constants, imgs, translationManager } from './../../utils/';
-export default {
-    template: mainItemTemplate,
-    bindings: {
-     itemType: '=',
-    },
-    controller: function ($http, $translate) {
+
+let mainItemController =  function ($http, $translate) {
       translationManager.subscribe($translate);
       this.groupId = 1;
       this.items = [];
@@ -63,10 +59,17 @@ export default {
 
 
 
-      };
+      }; 
+    };
 
-      
-    }
+mainItemController.$inject = ["$http", "$translate"];
+
+export default {
+    template: mainItemTemplate,
+    bindings: {
+     itemType: '=',
+    },
+    controller:mainItemController
   }
 
 

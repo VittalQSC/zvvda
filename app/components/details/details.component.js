@@ -1,9 +1,8 @@
 import angular from 'angular';
 import detailsTemplate from './details.template.html';
 import { configs, translationManager } from './../../utils/';
-export default {
-    template: detailsTemplate,
-    controller: function ($routeParams, $http) {
+
+let detailsController = function ($routeParams, $http) {
      Object.assign(this, {
         Tournament_details: "Tournament_details",
         Place: "Place",
@@ -19,6 +18,11 @@ export default {
         console.log('suc', res);
         this.tournamentData = Object.assign({}, res.data);
       }, err=>{console.log(err)});
-    }
+    };
+detailsController.$inject = ["$routeParams", "$http"];
+
+export default {
+    template: detailsTemplate,
+    controller: detailsController
   }
 

@@ -1,12 +1,8 @@
 import angular from 'angular'
 import playerTemplate from './player.template.html'
 import { configs, constants, translationManager } from './../../utils/';
-export default {
-    template: playerTemplate,
-    bindings: {
-      playerId: "="
-    },
-    controller: function ($http, $translate) {
+
+let playerController = function ($http, $translate) {
       translationManager.subscribe($translate);
       this.player = {};
       this.tournaments = [{}];
@@ -26,6 +22,15 @@ export default {
 
 
     }
+
+playerController.$inject = ["$http", "$translate"]
+
+export default {
+    template: playerTemplate,
+    bindings: {
+      playerId: "="
+    },
+    controller: playerController
 
   }
 

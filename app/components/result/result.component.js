@@ -1,9 +1,8 @@
 import angular from 'angular'
 import resultTemplate from './result.template.html'
 import { configs, constants, translationManager } from './../../utils/';
-export default {
-    template: resultTemplate,
-    controller: function ($routeParams, $http, $translate) {
+
+let resultController = function ($routeParams, $http, $translate) {
       translationManager.subscribe($translate);
       Object.assign(this, {
         player: "PLAYER",
@@ -20,7 +19,12 @@ export default {
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
       }, err=>{console.log(err)});
 
-    }
+    };
 
+resultController.$inject = ["$routeParams", "$http", "$translate"];
+
+export default {
+    template: resultTemplate,
+    controller: resultController
   }
 

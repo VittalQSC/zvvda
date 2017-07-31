@@ -1,18 +1,16 @@
 import angular from 'angular'
 import partnersTemplate from './partners.template.html'
 import { translationManager } from './../../utils/';
+
+let partnersController = function ($routeParams, $http, $translate) {
+      translationManager.subscribe($translate);
+    }
+  
+    partnersController.$inject = ["$routeParams", "$http", "$translate"]
+
 export default {
     template: partnersTemplate,
-    controller: function ($routeParams, $http, $translate) {
-      translationManager.subscribe($translate);
-    //   Object.assign(this, {
-    //     European_Youth_Championship: "19th_European_Youth_Championship",
-    //     Welcome_to_the_European_Youth_Championship: "Welcome_to_the_European_Youth_Championship",
-    //     There_will_be_more_information_soon_on_this_site: "There_will_be_more_information_soon_on_this_site",
-    //   });
-
-
-    }
+    controller: partnersController
 
   }
 

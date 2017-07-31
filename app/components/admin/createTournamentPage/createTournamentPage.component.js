@@ -3,9 +3,7 @@ import createTournamentPageTemplate from './createTournamentPage.template.html';
 // import configs from './../../../../configs/';
 import { configs } from './../../../utils/';
 
-export default {
-    template: createTournamentPageTemplate,
-    controller: function ($scope, $http) {
+let createTournamentPageController = function ($scope, $http) {
       // console.log('configs',configs);
       this.data = {
         arbiter: null,
@@ -58,6 +56,11 @@ export default {
         }, () => {});
       }
 
-    }
+    };
+createTournamentPageController.$inject = ["$scope", "$http"];
+
+export default {
+    template: createTournamentPageTemplate,
+    controller: createTournamentPageController
   }
 
