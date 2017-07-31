@@ -13,7 +13,9 @@ export default {
       Belgium: 'be',  
       Estonia: 'ee',  
       Germany: 'de',  
-      Turkey: 'tr', 
+      Turkey: 'tr',
+      Cyprus: 'cy', 
+      Moldova: 'md',
     },
     mapLang: {
       en: "nameEn",
