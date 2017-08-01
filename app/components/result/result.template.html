@@ -1,12 +1,15 @@
 <table class="table table-bordered">
     <tr>
+        <th>{{"Place" | translate}}</th>
         <th>#</th>
         <th>{{$ctrl.player | translate}}</th>
         <th>{{$ctrl.rating | translate}}</th>
         <th>{{$ctrl.title | translate}}</th>
         <th>{{$ctrl.country | translate}}</th>
+        <th>{{"Points" | translate}}</th>
     </tr>
     <tr ng-repeat="player in $ctrl.players">
+        <td>{{player.place}}</td>  
         <td>{{player.sortNumber}}</td>  
         <td>
             <a ng-href="{{'#!/players/' + player.header.id}}">
@@ -19,5 +22,6 @@
             <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
             {{player.header.country.name}}
         </td>  
+        <td>{{player.points}}</td>  
     </tr>
 </table>

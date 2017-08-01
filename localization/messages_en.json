@@ -38,6 +38,8 @@
     "In_progress": "In progress",
     "Finished": "Finished",
 
-    "Schedule": "Schedule"
+    "Schedule": "Schedule" ,
+
+    "Points": "Points"  
           
 }

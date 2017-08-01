@@ -38,5 +38,7 @@
     "In_progress": "В процессе",
     "Finished": "Завершен",
 
-    "Schedule": "Расписание"                  
+    "Schedule": "Расписание" ,
+
+    "Points": "Очки"                
 }

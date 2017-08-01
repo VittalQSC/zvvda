@@ -16,6 +16,7 @@ let resultController = function ($routeParams, $http, $translate) {
       .then(res=>{
         this.players = res.data.players
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
+        this.players.sort((a, b) => a.place - b.place)
       }, err=>{console.log(err)});
 
     };
