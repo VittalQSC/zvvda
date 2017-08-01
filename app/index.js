@@ -50,10 +50,10 @@ app
     }) 
     .when("/players/:id", {
         template : "<player player-id='ctrl.id'></player>",
-        controller: function ($routeParams) {
-            console.log('$routeParams', $routeParams);
+        controller: ['$routeParams', function ($routeParams) {
+            // console.log('$routeParams', $routeParams);
             this.id = $routeParams.id;
-        },
+        }],
         controllerAs: 'ctrl' 
     }) 
     .otherwise({
