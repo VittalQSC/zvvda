@@ -3,8 +3,11 @@ import { translationManager, configs, constants } from './../../utils/';
 let RoundsComponentController = function ($routeParams, $translate, $http) {
   translationManager.subscribe($translate);
   this.mapResults = constants.mapResults;
+  this.tournamentName = '';
   $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
   .then(res => {
+    // console.log(res.data);
+    this.tournamentName = res.data.name;
     this.rounds = res.data.rounds;
   }); 
 
