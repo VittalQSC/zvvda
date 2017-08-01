@@ -26,5 +26,10 @@ export default {
       FUTURE: 'Future',
       IN_PROGRESS: 'In_progress',
       FINISHED: 'Finished',
-    }        
+    },
+    mapResults: {
+      DRAW: "1 : 1",
+      WHITE_WON: "2 : 0", 
+      BLACK_WON: "2 : 0", 
+    }       
 }

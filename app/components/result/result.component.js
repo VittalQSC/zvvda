@@ -14,7 +14,6 @@ let resultController = function ($routeParams, $http, $translate) {
       this.players = [];
       $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{
-        console.log('sucRes', res)
         this.players = res.data.players
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
       }, err=>{console.log(err)});
