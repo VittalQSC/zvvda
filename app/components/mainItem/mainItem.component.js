@@ -52,7 +52,15 @@ let mainItemController =  function ($http, $translate) {
                   href: "#!/result?tournamentId=" + tournament.id,
                   text: tournament.shortName
                 };
-              });              
+              });
+              this.items.push({
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "#!/",
+                  text: "Teams",
+                  disabled: true
+                });              
             });
             break;
         }

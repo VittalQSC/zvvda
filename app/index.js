@@ -8,6 +8,7 @@ import 'angularjs-datepicker';
 import {ngRoute} from 'angular-route';
 import './components/navbar/navbar.module';
 import './components/schedule/schedule.module';
+import './components/rounds/rounds.module';
 import './components/mainItem/mainItem.module';
 import './components/result/result.module';
 import './components/player/player.module';
@@ -27,14 +28,11 @@ import 'angular-translate';
 
 var $injector = angular.injector();
 
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'mainItem', 'result', 'greeting', 'partners', 'player',
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'rounds', 'mainItem', 'result', 'greeting', 'partners', 'player',
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
 .config(['$routeProvider', '$qProvider',function($routeProvider, $qProvider) {
-// .config(function() {
-    // const $routeProvider = $injector.get('$routeProvider'), 
-    //       $qProvider = $injector.get('$qProvider');
 
     $qProvider.errorOnUnhandledRejections(false);
     $routeProvider

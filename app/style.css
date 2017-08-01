@@ -115,3 +115,17 @@ body {
     flex-wrap:wrap; 
     /* align-items: center;     */
 }
+
+.rounds-list {
+    font-size: 12px;
+}
+
+.disabled-main-item {
+    opacity: 0.3;
+    pointer-events:none;
+}
+
+.time-widget-container {
+    float: right;
+    margin: 15px;
+}

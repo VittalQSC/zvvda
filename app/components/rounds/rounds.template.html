@@ -1,0 +1,23 @@
+<ul class="rounds-list nav nav-tabs">
+    <li role="presentation" ng-repeat="round in $ctrl.rounds" ng-class="round.active && 'active'">
+         <a href="#" ng-click="$ctrl.handleRoundClick($event, round.id)"> 
+            {{round.name}}
+         </a> 
+    </li>
+</ul> 
+<table class="table table-striped" ng-show="$ctrl.currItems.length > 0">
+<thead>
+    <tr>
+    <th>White</th>
+    <th>Result</th>
+    <th>Black</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="item in $ctrl.currItems">
+        <td>{{item.white}}</td>
+        <td>{{item.result}}</td>
+        <td>{{item.black}}</td>
+    </tr>
+</tbody>
+</table>

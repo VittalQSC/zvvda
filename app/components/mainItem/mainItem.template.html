@@ -2,13 +2,13 @@
     <h2>
         {{$ctrl.header}}
         <small>
-            {{ $ctrl.group.start | date:'yyyy.MM.dd'}} - {{$ctrl.group.end | date:'yyyy.MM.dd'}}
+            {{ $ctrl.group.start | date:'yyyy.dd.MM'}} - {{$ctrl.group.end | date:'yyyy.dd.MM'}}
             <!-- {{"(" + $ctrl.group.start + " — " + $ctrl.group.end + ")" | date:'yyyy.MM.dd'}} -->
         </small>
         <span class="label label-default">{{$ctrl.status | translate}}</span>
     </h2>
     <ul class='list-inline items'>
-        <li ng-repeat="item in $ctrl.items" class="item">
+        <li ng-repeat="item in $ctrl.items" class="item" ng-class="item.disabled && 'disabled-main-item'">
             <!--<a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}">-->
             <a class="btn btn-default" ng-href="{{item.href}}">
                 <span class="ct" ng-class="item.className" ng-show="item.showIcon"></span>

@@ -4,6 +4,21 @@ import createTournamentPageTemplate from './createTournamentPage.template.html';
 import { configs } from './../../../utils/';
 
 let createTournamentPageController = function ($scope, $http) {
+
+      this.isAuth = false;
+      this.authForm = {
+        username: '',
+        password: ''
+      }
+
+      this.onLogin = function (evnet) {
+        evnet.preventDefault();
+        $http.post(`http://${configs.host}:${configs.port}/login`, this.authForm)
+          .then(res => {
+            this.isAuth = true;
+          });
+      }
+
       // console.log('configs',configs);
       this.data = {
         arbiter: null,
