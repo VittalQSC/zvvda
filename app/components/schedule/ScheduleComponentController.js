@@ -45,7 +45,6 @@ let ScheduleComponentController = function ($translate, $http) {
         event[constants.mapLang[translationManager.currLocale]]);
     }
     $http.get(`http://${configs.host}:${configs.port}/events`).then(res => {
-      console.log(res.data);
       let keys = Object.keys(res.data);
       keys.sort((d1, d2) => {
         return (new Date(d1)).getTime() - (new Date(d2)).getTime();

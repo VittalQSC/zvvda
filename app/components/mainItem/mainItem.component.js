@@ -40,6 +40,7 @@ let mainItemController =  function ($http, $translate) {
             itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${this.groupId}`;
             $http.get(itemsUrl)
             .then(res => {
+              console.log("mainItem",res.data);
               const tournaments = res.data.tournaments;
               this.group = res.data.group;
               this.header = res.data.group[constants.mapLang[translationManager.currLocale]];

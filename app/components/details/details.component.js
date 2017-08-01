@@ -13,9 +13,11 @@ let detailsController = function ($routeParams, $http) {
       });
 
       this.tournamentData = {};
+      this.chessArbiterUrl = '';
       $http.get(`http://${configs.host}:${configs.port}/tournaments/${$routeParams.tournamentId}`)
       .then(res => {
         console.log('suc', res);
+        this.chessArbiterUrl = res.data.externalUrl;
         this.tournamentData = Object.assign({}, res.data);
       }, err=>{console.log(err)});
     };
