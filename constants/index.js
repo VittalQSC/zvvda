@@ -30,6 +30,6 @@ export default {
     mapResults: {
       DRAW: "1 : 1",
       WHITE_WON: "2 : 0", 
-      BLACK_WON: "2 : 0", 
+      BLACK_WON: "0 : 2", 
     }       
 }
