@@ -55,6 +55,15 @@ let ScheduleComponentController = function ($translate, $http) {
           events: res.data[key]
         };
       });
+      let today = new Date();
+      for (let i = 0; i < eventsObjs.length - 1; i++) {
+        console.log(eventsObjs);
+        if ((new Date(eventsObjs[i+1].date)).getTime() > today.getTime()) {
+          this.currEventIndex = i;
+          break;
+        }
+      }
+
       this.currEvent = eventsObjs[this.currEventIndex];
       this.currEventNames = this.currEvent.events.map(event => 
         event[constants.mapLang[translationManager.currLocale]]);
