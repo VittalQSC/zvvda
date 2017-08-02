@@ -51,7 +51,7 @@ let mainItemController =  function ($http, $translate) {
                   iconSrc: "",
                   className: ``,
                   href: "#!/result?tournamentId=" + tournament.id,
-                  text: tournament.shortName
+                  text: tournament.shortName + " " + tournament.currentRound + "/" + tournament.roundAmount
                 };
               });
               this.items.push({
