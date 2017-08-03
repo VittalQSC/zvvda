@@ -1,1 +1,40 @@
-<h2>COUTNRY</h2>
+<h2>
+    {{$ctrl.country.name}}
+    <span ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[$ctrl.country.name]">
+    </span>
+</h2>
+<div class="country-table-container" ng-repeat="tourn in $ctrl.results">
+  <h3>{{tourn.name}}</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>{{"#" | translate}}</th>
+        <th>{{"PLAYER" | translate}}</th>
+        <th>{{"Place" | translate}}</th>
+        <th>{{"Games" | translate}}</th>
+        <th>{{"Points" | translate}}</th>
+        <th>{{"+"}}</th>
+        <th>{{"="}}</th>
+        <th>{{"-"}}</th>
+        <th>{{""}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(i, player) in tourn.players">
+        <td>{{i + 1| translate}}</td>
+        <td>
+            <a ng-href="{{'#!/players/' + player.header.id}}">
+                {{player.header.externalName | translate}}
+            </a>
+        </td>
+        <td>{{player.place | translate}}</td>
+        <td>{{player.gamesPlayed | translate}}</td>
+        <td>{{player.points | translate}}</td>
+        <td>{{player.wins | translate}}</td>
+        <td>{{player.draws | translate}}</td>
+        <td>{{player.loses | translate}}</td>
+        <td>{{player.teamPoints | translate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
