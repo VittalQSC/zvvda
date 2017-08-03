@@ -30,10 +30,14 @@ export class TranslationManager {
         $translateProvider.translations('en', this.locale.en);
         $translateProvider.translations('ru', this.locale.ru);  
         $translateProvider.translations('be', this.locale.be);  
-        $translateProvider.preferredLanguage(this.currLocale || 'en');                
+        $translateProvider.preferredLanguage(this.currLocale || 'en');   
+        
+        !window.localStorage.getItem('lang') && window.localStorage.setItem('lang', this.currLocale || 'en')    
+        this.setCurrLocale(window.localStorage.getItem('lang'));         
     }
 
     setCurrLocale (locale, $translate) {
+        window.localStorage.setItem('lang', locale)
         this.currLocale = locale;
         this.update();
         window.dispatchEvent(new CustomEvent('locale-changed',{locale}))
