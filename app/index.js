@@ -13,6 +13,7 @@ import './components/mainItem/mainItem.module';
 import './components/result/result.module';
 import './components/player/player.module';
 import './components/greeting/greeting.module';
+import './components/country/country.module';
 import './components/partners/partners.module';
 import './components/resultNavigation/resultNavigation.module';
 import './components/details/details.module';
@@ -28,7 +29,7 @@ import 'angular-translate';
 
 var $injector = angular.injector();
 
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'rounds', 'mainItem', 'result', 'greeting', 'partners', 'player',
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'country', 'rounds', 'mainItem', 'result', 'greeting', 'partners', 'player',
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
@@ -56,6 +57,14 @@ app
         }],
         controllerAs: 'ctrl' 
     }) 
+    .when("/country/:id", {
+        // template: "<h2>country id {{ctrl.id}}</h2>",
+        template : "<country country-id='ctrl.id'></country>",
+        controller: ["$routeParams", function ($routeParams) {
+            this.id = $routeParams.id;
+        }],
+        controllerAs: "ctrl"
+    })
     .otherwise({
         template: homeRoute
     });

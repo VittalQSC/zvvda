@@ -14,10 +14,15 @@ let resultController = function ($routeParams, $http, $translate) {
       this.players = [];
       $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{
-        console.log('result', res.data);
         this.players = res.data.players
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
         this.players.sort((a, b) => a.place - b.place)
+        
+        this.mapPlayerNameToId = this.players.reduce((map, player) => {
+          map[player.id] = player.externalName;
+          return map;
+        }, {});
+
       }, err=>{console.log(err)});
 
     };

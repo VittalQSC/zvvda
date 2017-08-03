@@ -2,7 +2,7 @@
     <h2>
         {{$ctrl.header}}
         <small>
-            {{ $ctrl.group.start | date:'dd.MM.yyyy'}} - {{$ctrl.group.end | date:'dd.MM.yyyy'}}
+            {{ $ctrl.group.start | date:'dd.MM.yyyy'}} {{$ctrl.group.start && $ctrl.group.end && "-"}} {{$ctrl.group.end | date:'dd.MM.yyyy'}}
             <!-- {{"(" + $ctrl.group.start + " — " + $ctrl.group.end + ")" | date:'yyyy.MM.dd'}} -->
         </small>
         <span class="label label-default">{{$ctrl.status | translate}}</span>
