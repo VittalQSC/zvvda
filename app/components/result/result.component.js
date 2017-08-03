@@ -1,4 +1,5 @@
 import angular from 'angular'
+import $ from 'jquery';
 import resultTemplate from './result.template.html'
 import { configs, constants, translationManager } from './../../utils/';
 
@@ -26,6 +27,11 @@ let resultController = function ($routeParams, $http, $translate) {
         // console.log(this.players);
       }, err=>{console.log(err)});
 
+      this.$onInit = function () {
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        }); 
+      }
     };
 
 resultController.$inject = ["$routeParams", "$http", "$translate"];

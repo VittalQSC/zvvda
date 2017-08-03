@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import angular from 'angular'
 import resultComponent from './result.component'
 import { translationManager } from './../../utils/';
