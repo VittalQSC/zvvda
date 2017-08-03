@@ -24,11 +24,10 @@
             {{player.header.country.name}}
         </td>  
         <td ng-repeat="(i, opp) in player.opponentsByRound">
-            <a ng-href="{{'#!/players/' + opp.opponentId}}" data-toggle="tooltip" 
-            ng-attr-title="{{$ctrl.mapPlayerNameToId[opp.opponentId] || 'Opponent'}}" 
-            ng-class="player.id + '-vs-' + opp.opponentId">
-                {{opp.opponentId}}    
-            </a>/{{opp.points}}
+            <a ng-href="{{'#!/players/' + $ctrl.mapIdToPlayer[opp.opponentId].header.id}}" data-toggle="tooltip" 
+            ng-attr-title="{{$ctrl.mapIdToPlayer[opp.opponentId].externalName || 'Opponent'}}">
+                {{$ctrl.mapIdToPlayer[opp.opponentId].sortNumber}}    
+            </a>/ {{opp.points}}
         </td> 
         <td>{{player.points}}</td>  
     </tr>

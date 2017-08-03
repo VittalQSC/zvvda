@@ -18,11 +18,12 @@ let resultController = function ($routeParams, $http, $translate) {
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
         this.players.sort((a, b) => a.place - b.place)
         
-        this.mapPlayerNameToId = this.players.reduce((map, player) => {
-          map[player.id] = player.externalName;
+        this.mapIdToPlayer = this.players.reduce((map, player) => {
+          // map[player.id] = player.externalName;
+          map[player.id] = player;
           return map;
         }, {});
-
+        // console.log(this.players);
       }, err=>{console.log(err)});
 
     };

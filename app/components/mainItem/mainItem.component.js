@@ -17,7 +17,7 @@ let mainItemController =  function ($http, $translate) {
             this.showFlag = true;
             $http.get(itemsUrl)
             .then(res => {
-              console.log('COUNTRIES', res.data);
+              // console.log('COUNTRIES', res.data);
               const countries = res.data;
               this.items = countries.map(country => {
                 return {
