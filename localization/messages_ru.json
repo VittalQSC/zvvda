@@ -13,7 +13,7 @@
     "There_will_be_more_information_soon_on_this_site":  "В скором времени на сайте появится больше информации.",
 
     "Tournament_details": "Подробности турнира",
-    "Place": "Место проведения",
+    "Place": "Место",
     "Players_number": "Количество игроков",
     "Current_Round": "Текущий тур",
     "Arbiter": "Судья",   
@@ -41,5 +41,5 @@
     "Schedule": "Расписание" ,
 
     "Points": "Очки",
-    "Games": "Игры"                
+    "Games": "Партии"                
 }
