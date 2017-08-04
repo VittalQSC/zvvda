@@ -9,7 +9,12 @@
     </tr>
     <tr ng-repeat="team in $ctrl.teams">
         <td>{{team.place}}</td>  
-        <td>{{team.name}}</td>  
+        <td>
+            <a ng-href="{{'#!/country/' + team.country.id}}">
+                <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[team.country.name]"></span>
+                {{team.name}}
+            </a>
+        </td>  
         <td ng-repeat="tourn2 in $ctrl.maxTourns">
             {{
                 $ctrl.findT(team, tourn2.shortName) || "-"
