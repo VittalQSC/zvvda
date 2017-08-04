@@ -12,6 +12,7 @@ import './components/rounds/rounds.module';
 import './components/mainItem/mainItem.module';
 import './components/result/result.module';
 import './components/player/player.module';
+import './components/teams/teams.module';
 import './components/greeting/greeting.module';
 import './components/country/country.module';
 import './components/partners/partners.module';
@@ -23,13 +24,15 @@ import homeRoute from  './routes/home.html'
 import resultRoute from  './routes/result.html'
 import regulationsRoute from  './routes/regulations.html'
 import adminRoute from  './routes/admin.html'
+import teamsRoute from  './routes/teams.html'
 // import playerRoute from  './routes/admin.html'
 
 import 'angular-translate';
 
 var $injector = angular.injector();
 
-const app = angular.module('app', ['ngRoute','navbar','schedule', 'country', 'rounds', 'mainItem', 'result', 'greeting', 'partners', 'player',
+const app = angular.module('app', ['ngRoute','navbar','schedule', 'country', 'rounds', 
+'mainItem', 'result', 'greeting', 'partners', 'player', 'teams',
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
@@ -43,6 +46,13 @@ app
     .when("/result", {
         template : resultRoute,
     })
+    .when("/teams", {
+        template: teamsRoute,
+        // controller: ['$routeParams', function ($routeParams) {
+        //     this.id = $routeParams.id;
+        // }],
+        // controllerAs: 'ctrl'
+    })
     .when("/regulations", {
         template : regulationsRoute,
     })
@@ -52,7 +62,6 @@ app
     .when("/players/:id", {
         template : "<player player-id='ctrl.id'></player>",
         controller: ['$routeParams', function ($routeParams) {
-            // console.log('$routeParams', $routeParams);
             this.id = $routeParams.id;
         }],
         controllerAs: 'ctrl' 

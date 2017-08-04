@@ -58,9 +58,9 @@ let mainItemController =  function ($http, $translate) {
                   showIcon: false,
                   iconSrc: "",
                   className: ``,
-                  href: "#!/",
+                  href: "#!/teams?groups=1",
                   text: "Teams",
-                  disabled: true
+                  // disabled: true
                 });              
             });
             break;

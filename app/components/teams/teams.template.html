@@ -1,0 +1,20 @@
+<h2>{{"Team Results" | translate}}</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>{{"Place" | translate}}</th>
+        <th>{{"Name" | translate}}</th>
+        <th ng-repeat="tourn in $ctrl.maxTourns">{{tourn.shortName | translate}}</th>
+        <th>{{"Points" | translate}}</th>
+    </tr>
+    <tr ng-repeat="team in $ctrl.teams">
+        <td>{{team.place}}</td>  
+        <td>{{team.name}}</td>  
+        <td ng-repeat="tourn2 in $ctrl.maxTourns">
+            {{
+                $ctrl.findT(team, tourn2.shortName) || "-"
+            }}
+        </td>  
+        <td>{{team.points}}</td>  
+    </tr>
+</table>
