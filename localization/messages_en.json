@@ -41,6 +41,9 @@
     "Schedule": "Schedule" ,
 
     "Points": "Points",
-    "Games": "Games"  
+    "Games": "Games",
+    
+    "Team Points": "Team Points"
+
           
 }
