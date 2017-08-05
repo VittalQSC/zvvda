@@ -7,6 +7,7 @@
     "RATING": "Рэйтынг",
     "TITLE": "Званне",
     "COUNTRY": "Краіна",
+    "Countries":"Краіны", 
 
     "19th_European_Youth_Championship": "19-ы Маладзёвы Чэмпіянат Еўропы",
     "Welcome_to_the_European_Youth_Championship": "Вітаем на Маладзевым Чэмпіянаце Еўропы ў г. Віцебск, Беларусь! ",
@@ -44,6 +45,8 @@
     "Games": "Партыі",
     
     "Team Points": "Камандныя Ачкi",
-    "Team Results": "Камандныя Вынiкi"    
+    "Team Results": "Камандныя Вынiкi",
+    "Name": "Назва",
+    "Details of points": "Падрабязныя ачкі"    
             
 }

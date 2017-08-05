@@ -7,6 +7,7 @@
     "RATING":"Rating",
     "TITLE":"Title",
     "COUNTRY":"Country",
+    "Countries":"Countries", 
 
     "19th_European_Youth_Championship": "19th European Youth Championship",
     "Welcome_to_the_European_Youth_Championship": "Welcome to the European Youth Championship in Vitebsk, Belarus!",
@@ -44,7 +45,9 @@
     "Games": "Games",
     
     "Team Points": "Team Points",
-    "Team Results": "Team Results"
+    "Team Results": "Team Results",
+    "Name": "Name",
+    "Details of points": "Details of points"
 
           
 }

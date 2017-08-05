@@ -23,3 +23,24 @@
         <td>{{team.points}}</td>  
     </tr>
 </table>
+
+<h2>{{"Details of points" | translate}}</h2>
+<div ng-repeat="(i, team) in $ctrl.teams">
+    <h3>
+        {{(i+1) + '. '}} {{team.country.name}}
+        <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[team.country.name]"></span>                
+    </h3>
+    <div>
+        <div ng-repeat="tourn in team.tournaments">
+            <a ng-href="{{'#!/result?tournamentId=' + tourn.id}}">{{tourn.shortName}}</a> 
+            :
+            <span ng-repeat="(j, player) in tourn.players">
+                {{j !== 0 ? ', ' : ''}}
+                <a ng-href="{{'#!/players/' + player.header.id}}">
+                    {{player.header.externalName}}
+                </a>
+                {{" (" + player.points + ") "}}
+            </span>
+        </div>
+    </div>
+</div>

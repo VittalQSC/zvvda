@@ -7,6 +7,7 @@
     "RATING":"Рейтинг",
     "TITLE": "Звание",
     "COUNTRY":"Страна",
+    "Countries":"Страны",
 
     "19th_European_Youth_Championship": "19-ый Молодежный Чемпионат Европы",
     "Welcome_to_the_European_Youth_Championship": "Добро пожаловать на Молодежный Чемпионат Европы в г. Витебск, Беларусь!",
@@ -44,5 +45,7 @@
     "Games": "Партии",
     
     "Team Points": "Командные Очки",
-    "Team Results": "Командные Результаты"
+    "Team Results": "Командные Результаты",
+    "Name": "Название",
+    "Details of points": "Подробные очки"
 }
