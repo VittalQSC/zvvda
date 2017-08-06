@@ -1,34 +1,43 @@
-<table class="table table-bordered">
-    <tr>
-        <th>{{"Place" | translate}}</th>
-        <th>#</th>
-        <th>{{$ctrl.player | translate}}</th>
-        <th>{{$ctrl.rating | translate}}</th>
-        <th>{{$ctrl.title | translate}}</th>
-        <th>{{$ctrl.country | translate}}</th>
-        <th ng-repeat="(i, opp) in $ctrl.players[0].opponentsByRound">{{i + 1}}</th>
-        <th>{{"Points" | translate}}</th>
-    </tr>
-    <tr ng-repeat="player in $ctrl.players">
-        <td>{{player.place}}</td>  
-        <td>{{player.sortNumber}}</td>  
-        <td>
-            <a ng-href="{{'#!/players/' + player.header.id}}">
-                {{(player.header.surname || '') + " " + (player.header.name || '')}}
-            </a>
-        </td>  
-        <td>{{player.header.rating}}</td>  
-        <td>{{player.header.rank}}</td>  
-        <td>
-            <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
-            {{player.header.country.name}}
-        </td>  
-        <td ng-repeat="(i, opp) in player.opponentsByRound">
-            <a ng-href="{{'#!/players/' + $ctrl.mapIdToPlayer[opp.opponentId].header.id}}" data-toggle="tooltip" 
-            ng-attr-title="{{$ctrl.mapIdToPlayer[opp.opponentId].externalName || 'Opponent'}}">
-                {{$ctrl.mapIdToPlayer[opp.opponentId].sortNumber}}    
-            </a>/ {{opp.points}}
-        </td> 
-        <td>{{player.points}}</td>  
-    </tr>
-</table>
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th class="text-center">{{"Place" | translate}}</th>
+            <th class="text-center">#</th>
+            <th>{{$ctrl.player | translate}}</th>
+            <th class="text-center">{{$ctrl.country | translate}}</th>
+            <th class="text-center">{{"Points" | translate}}</th>
+            <th class="text-center" ng-repeat="(i, opp) in $ctrl.players[0].opponentsByRound">{{i + 1}}</th>
+        </tr>
+        <tr ng-repeat="player in $ctrl.players">
+            <td class="text-nowrap text-center">{{player.place}}</td>  
+            <td class="text-nowrap text-center">{{player.sortNumber}}</td>  
+            <td class="text-nowrap">
+                <a ng-href="{{'#!/players/' + player.header.id}}">
+                    {{(player.header.surname || '') + " " + (player.header.name || '')}}
+                </a>
+            </td>  
+            <td class="text-nowrap text-center">
+                <a ng-href="{{'#!/country/' + player.header.country.id}}"
+                    data-toggle="tooltip" data-placement="bottom"
+                    ng-attr-title="{{player.header.country.name}}">
+                    <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
+                </a>
+            </td>  
+            <td class="text-nowrap text-center">{{player.points}}</td>  
+            <td class="text-nowrap text-center" ng-repeat="(i, opp) in player.opponentsByRound">
+                <span data-toggle="tooltip" data-placement="bottom"
+                    ng-attr-title="{{$ctrl.mapIdToPlayer[opp.opponentId].externalName || 'Opponent'}}">
+                    <a ng-href="{{'#!/players/' + $ctrl.mapIdToPlayer[opp.opponentId].header.id}}">
+                        {{$ctrl.mapIdToPlayer[opp.opponentId].sortNumber}}</a>
+                    <span ng-show="opp.white">w</span><span ng-show="opp.white == false">b</span> / {{opp.points}}
+                </span>
+            </td> 
+        </tr>
+    </table>
+    </div>
+    <script>
+
+    $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+            }); 
+    </script>
