@@ -52,7 +52,9 @@
 
     "White": "White",
     "Result": "Result",
-    "Black": "Black"
+    "Black": "Black",
+
+    "Teams": "Teams"
 
           
 }

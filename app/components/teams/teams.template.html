@@ -15,7 +15,11 @@
                     {{team.name}}
                 </a>
             </td>  
-            <td class="text-nowrap text-center">{{team.points}}</td>  
+            <td class="text-nowrap text-center">
+                <strong>
+                    {{team.points}}
+                </strong>
+            </td>  
             <td ng-repeat="tourn2 in $ctrl.maxTourns" class="text-nowrap text-center">
                 {{
                     $ctrl.findT(team, tourn2.shortName) || "-"
