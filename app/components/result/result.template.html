@@ -29,15 +29,9 @@
                     ng-attr-title="{{$ctrl.mapIdToPlayer[opp.opponentId].externalName || 'Opponent'}}">
                     <a ng-href="{{'#!/players/' + $ctrl.mapIdToPlayer[opp.opponentId].header.id}}">
                         {{$ctrl.mapIdToPlayer[opp.opponentId].sortNumber}}</a>
-                    <span ng-show="opp.white">w</span><span ng-show="opp.white == false">b</span> / {{opp.points}}
+                    <span class="white-box" ng-show="opp.white"></span><span class="black-box" ng-show="opp.white == false"></span> / {{opp.points}}
                 </span>
             </td> 
         </tr>
     </table>
     </div>
-    <script>
-
-    $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
-            }); 
-    </script>

@@ -10,29 +10,13 @@
     <div class="container2">
       <div class="container3">
         <main class="main">
-          <ng-view></ng-view>
+          <ng-view autoscroll="true"></ng-view>
         </main>
       </div>      
       <nav class="nav2">
-        <!--<div class="panel panel-default">
-          <div class="panel-body">
-            <div>
-              <a href="/#">
-                <img src="./static/logos/fmjdlogo.gif" alt="">
-              </a>
-              <a href="/#">
-                <img src="./static/logos/logo_europedraughts.png" alt="">
-              </a>
-              
-              <a href="/#">
-                <img src="./static/logos/logo_radio.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>-->
         <partners></partners>
         
-        <div class="fb-page" data-href="https://www.facebook.com/vitebsk2017/" 
+        <div class="fb-page" data-href="https://www.facebook.com/vitebsk2017/"  
             data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" 
             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/vitebsk2017/" class="fb-xfbml-parse-ignore">
@@ -40,12 +24,26 @@
             </blockquote>
         </div>
 
+        <!-- <a type="button" class="btn btn-primary"
+        target="_blank"
+        href="https://www.facebook.com/vitebsk2017/">
+          Vitebsk 2017 Facebook Page
+        </a> -->
+
       </nav>      
     </div>
   </body>
-<script src="./bundle.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./bundle.js"></script>
+<script>
+  setTimeout(() => {
 
+    $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+    }); 
+  }, 1000);
+</script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

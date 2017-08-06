@@ -73,8 +73,14 @@ body {
 
 .partners {
     display:flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     flex-wrap:wrap;
+    
+}
+
+.partners-vertical {
+    justify-content: center;
+    flex-direction: column; 
 }
 
 .info-partner-container {
@@ -128,4 +134,32 @@ body {
 .time-widget-container {
     float: right;
     margin: 15px;
+}
+
+.wide {
+    width: 75%;
+}
+.narrow {
+    width: 20%;
+    min-width: 150px;
+}
+
+.white-box, .black-box {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.white-box {
+    background: white;
+}
+.black-box {
+    background: darkslategrey;
+}
+
+.review-navig-area{
+    background: lightgray;
+    padding: 3px;
+    border-radius: 3px;
 }

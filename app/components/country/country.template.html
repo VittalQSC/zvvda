@@ -3,37 +3,41 @@
     <span ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[$ctrl.country.name]">
     </span>
 </h2>
-<div class="country-table-container" ng-repeat="tourn in $ctrl.results">
-  <h3>{{tourn.name}}</h3>
-  <table class="table table-bordered">
+<div class="country-table-container table-responsive" ng-repeat="tourn in $ctrl.results">
+  <h3>
+    <a ng-href="{{'#!/result?tournamentId=' + tourn.id}}">
+      {{tourn.name}}
+    </a>
+  </h3>
+  <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
-        <th>{{"#" | translate}}</th>
+        <th class="text-center">{{"#" | translate}}</th>
         <th>{{"PLAYER" | translate}}</th>
-        <th>{{"Place" | translate}}</th>
-        <th>{{"Games" | translate}}</th>
-        <th>{{"Points" | translate}}</th>
-        <th>{{"+"}}</th>
-        <th>{{"="}}</th>
-        <th>{{"-"}}</th>
-        <th>{{"Team Points" | translate}}</th>
+        <th class="text-center">{{"Place" | translate}}</th>
+        <th class="text-center">{{"Games" | translate}}</th>
+        <th class="text-center">{{"Points" | translate}}</th>
+        <th class="text-center">{{"+"}}</th>
+        <th class="text-center">{{"="}}</th>
+        <th class="text-center">{{"-"}}</th>
+        <th class="text-center">{{"Team Points" | translate}}</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="(i, player) in tourn.players">
-        <td>{{i + 1| translate}}</td>
-        <td>
+        <td class="text-nowrap text-center">{{i + 1| translate}}</td>
+        <td class="text-nowrap">
             <a ng-href="{{'#!/players/' + player.header.id}}">
                 {{player.header.externalName | translate}}
             </a>
         </td>
-        <td>{{player.place | translate}}</td>
-        <td>{{player.gamesPlayed | translate}}</td>
-        <td>{{player.points | translate}}</td>
-        <td>{{player.wins | translate}}</td>
-        <td>{{player.draws | translate}}</td>
-        <td>{{player.loses | translate}}</td>
-        <td>{{player.teamPoints | translate}}</td>
+        <td class="text-nowrap text-center">{{player.place | translate}}</td>
+        <td class="text-nowrap text-center">{{player.gamesPlayed | translate}}</td>
+        <td class="text-nowrap text-center">{{player.points | translate}}</td>
+        <td class="text-nowrap text-center">{{player.wins | translate}}</td>
+        <td class="text-nowrap text-center">{{player.draws | translate}}</td>
+        <td class="text-nowrap text-center">{{player.loses | translate}}</td>
+        <td class="text-nowrap text-center">{{player.teamPoints | translate}}</td>
       </tr>
     </tbody>
   </table>

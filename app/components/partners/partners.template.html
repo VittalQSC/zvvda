@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-body">
-    <div class="partners">
+    <div class="partners" ng-class="$ctrl.vertical ? '<partners-vertical></partners-vertical>' : ''">
         <span class="info-partner-container">  
             <a href="https://radiostalica.by/index.php" target="_blank">
             <img src="./../../../static/logos/logo_radio.png" alt="">
@@ -11,10 +11,10 @@
                 </strong>
             </div>
         </span>
-        <a href="https://fmjd.org/" target="_blank">
+        <a href="https://fmjd.org/" target="_blank" class="info-partner-container">
         <img src="./../../../static/logos/fmjdlogo.png" alt="">
         </a>
-        <a href="http://europedraughts.org/" target="_blank">
+        <a href="http://europedraughts.org/" target="_blank" class="info-partner-container">
         <img src="./../../../static/logos/logo_europedraughts.png" alt="">
         </a>
         

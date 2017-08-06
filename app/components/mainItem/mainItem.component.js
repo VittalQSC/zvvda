@@ -41,7 +41,9 @@ let mainItemController =  function ($http, $translate) {
             $http.get(itemsUrl)
             .then(res => {
               console.log("mainItem",res.data);
-              const tournaments = res.data.tournaments;
+              this.tournaments = res.data.tournaments;
+              this.tournaments.sort((a, b) => a.shortName.localeCompare(b.shortName));
+              const tournaments = this.tournaments;
               this.group = res.data.group;
               this.header = res.data.group[constants.mapLang[translationManager.currLocale]];
               this.status = constants.mapTournamentStatus[this.group.status];
@@ -51,7 +53,8 @@ let mainItemController =  function ($http, $translate) {
                   iconSrc: "",
                   className: ``,
                   href: "#!/result?tournamentId=" + tournament.id,
-                  text: tournament.shortName + " " + tournament.currentRound + "/" + tournament.roundAmount
+                  text: tournament.shortName,
+                  subText:  " " + tournament.currentRound + "/" + tournament.roundAmount
                 };
               });
               this.items.push({
@@ -60,6 +63,7 @@ let mainItemController =  function ($http, $translate) {
                   className: ``,
                   href: "#!/teams?groups=1",
                   text: "Teams",
+                  isTeams: true,
                   // disabled: true
                 });              
             });
@@ -77,6 +81,7 @@ export default {
     template: mainItemTemplate,
     bindings: {
      itemType: '=',
+     showPreview: '='
     },
     controller:mainItemController
   }

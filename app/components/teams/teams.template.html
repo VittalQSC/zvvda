@@ -1,28 +1,29 @@
 <h2>{{"Team Results" | translate}}</h2>
-
-<table class="table table-bordered">
-    <tr>
-        <th>{{"Place" | translate}}</th>
-        <th>{{"Name" | translate}}</th>
-        <th ng-repeat="tourn in $ctrl.maxTourns">{{tourn.shortName | translate}}</th>
-        <th>{{"Points" | translate}}</th>
-    </tr>
-    <tr ng-repeat="team in $ctrl.teams">
-        <td>{{team.place}}</td>  
-        <td>
-            <a ng-href="{{'#!/country/' + team.country.id}}">
-                <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[team.country.name]"></span>
-                {{team.name}}
-            </a>
-        </td>  
-        <td ng-repeat="tourn2 in $ctrl.maxTourns">
-            {{
-                $ctrl.findT(team, tourn2.shortName) || "-"
-            }}
-        </td>  
-        <td>{{team.points}}</td>  
-    </tr>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th  class="text-center">{{"Place" | translate}}</th>
+            <th>{{"Name" | translate}}</th>
+            <th  class="text-center">{{"Points" | translate}}</th>
+            <th ng-repeat="tourn in $ctrl.maxTourns"  class="text-center">{{tourn.shortName | translate}}</th>
+        </tr>
+        <tr ng-repeat="team in $ctrl.teams">
+            <td class="text-nowrap text-center">{{team.place}}</td>  
+            <td>
+                <a ng-href="{{'#!/country/' + team.country.id}}">
+                    <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[team.country.name]"></span>
+                    {{team.name}}
+                </a>
+            </td>  
+            <td class="text-nowrap text-center">{{team.points}}</td>  
+            <td ng-repeat="tourn2 in $ctrl.maxTourns" class="text-nowrap text-center">
+                {{
+                    $ctrl.findT(team, tourn2.shortName) || "-"
+                }}
+            </td>  
+        </tr>
+    </table>
+</div>
 
 <h2>{{"Details of points" | translate}}</h2>
 <div ng-repeat="(i, team) in $ctrl.teams">

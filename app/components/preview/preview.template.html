@@ -1,0 +1,47 @@
+<div ng-show="$ctrl.tournaments" class="table-responsive">
+<!-- {{"Preview" | translate}} -->
+<nav class="breadcrumb">
+    <span ng-repeat="(i, tourn) in $ctrl.tournaments">
+        <a class="breadcrumb-item" href="/#!" ng-hide="i===$ctrl.activeTournIndex" ng-click="$ctrl.tournClicked($event, i)">
+            {{tourn.shortName}}
+        </a> 
+        <span class="breadcrumb-item" ng-show="i===$ctrl.activeTournIndex">{{tourn.shortName}}</span>  
+        {{'/'}}
+    </span>
+  <!-- <a class="breadcrumb-item" href="#">Home</a>
+  <a class="breadcrumb-item" href="#">Library</a>
+  <a class="breadcrumb-item" href="#">Data</a>
+  <span class="breadcrumb-item active">Bootstrap</span> -->
+</nav>
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th class="text-center">{{"Place" | translate}}</th>
+        <th class="text-center">{{$ctrl.player | translate}}</th>
+        <th class="text-center">{{$ctrl.country | translate}}</th>
+		<th class="text-center">{{"+" | translate}}</th>
+        <th class="text-center">{{"=" | translate}}</th>
+        <th class="text-center">{{"-" | translate}}</th>        
+        <th class="text-center">{{"Points" | translate}}</th>
+    </tr>
+    <tr ng-repeat="player in $ctrl.tournaments[$ctrl.activeTournIndex].top3players">
+        <td class="text-nowrap text-center">{{player.place}}</td>  
+        <td class="text-nowrap text-center">
+            <a ng-href="{{'#!/players/' + player.header.id}}">
+                {{(player.header.surname || '') + " " + (player.header.name || '')}}
+            </a>            
+        </td>   
+        <td class="text-nowrap text-center">
+            <a ng-href="{{'#!/country/' + player.header.country.id}}"
+                data-toggle="tooltip" data-placement="bottom"
+                ng-attr-title="{{player.header.country.name}}">
+                <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
+            </a>
+        </td>  
+        <td class="text-nowrap text-center">{{player.wins | translate}}</td>  
+        <td class="text-nowrap text-center">{{player.draws | translate}}</td>  
+        <td class="text-nowrap text-center">{{player.loses | translate}}</td>  
+        <td class="text-nowrap text-center">{{player.points}}</td>  
+    </tr>
+</table>
+
+</div>

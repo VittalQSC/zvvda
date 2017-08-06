@@ -67,7 +67,6 @@ app
         controllerAs: 'ctrl' 
     }) 
     .when("/country/:id", {
-        // template: "<h2>country id {{ctrl.id}}</h2>",
         template : "<country country-id='ctrl.id'></country>",
         controller: ["$routeParams", function ($routeParams) {
             this.id = $routeParams.id;
@@ -77,4 +76,6 @@ app
     .otherwise({
         template: homeRoute
     });
+}])
+.controller('AppCtrl',["$location", '$scope', function ($location, $scope) { 
 }]);

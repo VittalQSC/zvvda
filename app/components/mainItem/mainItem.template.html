@@ -10,10 +10,19 @@
     <ul class='list-inline items'>
         <li ng-repeat="item in $ctrl.items" class="item" ng-class="item.disabled && 'disabled-main-item'">
             <!--<a class="btn btn-default" ng-href="#!/result?tournamentId={{tournament.id}}">-->
-            <a class="btn btn-default" ng-href="{{item.href}}">
+            <a class="btn btn-default" ng-href="{{item.href}}" ng-class="item.isTeams ? 'btn-primary' : ''">
                 <span class="ct" ng-class="item.className" ng-show="item.showIcon"></span>
+                <span ng-show="!item.showIcon">
+                    <strong >
+                    {{item.text}}
+                    </strong>
+                    {{item.subText}}
+                </span>
+                <span ng-show="item.showIcon">  
                 {{item.text}}
+                </span>
             </a>
         </li>
     </ul>
+     <preview ng-show="$ctrl.showPreview" tournament-id="$ctrl.groupId" tournaments="$ctrl.tournaments"></preview> 
 </div>

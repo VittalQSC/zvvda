@@ -47,5 +47,10 @@
     "Team Points": "Командные Очки",
     "Team Results": "Командные Результаты",
     "Name": "Название",
-    "Details of points": "Подробные очки"
+    "Details of points": "Подробные очки",
+    "Round": "Тур",
+
+    "White": "Белые",
+    "Result": "Результат",
+    "Black": "Черные"
 }

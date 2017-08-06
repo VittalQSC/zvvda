@@ -2,16 +2,16 @@
 <ul class="rounds-list nav nav-tabs">
     <li role="presentation" ng-repeat="round in $ctrl.rounds" ng-class="round.active && 'active'">
          <a href="#" ng-click="$ctrl.handleRoundClick($event, round.id)"> 
-            {{"Round " + round.number}}
+            {{"Round" | translate}} {{round.number}}
          </a> 
     </li>
 </ul> 
 <table class="table table-striped" ng-show="$ctrl.currGames.length > 0">
 <thead>
     <tr>
-    <th>White</th>
-    <th>Result</th>
-    <th>Black</th>
+    <th>{{"White" | translate}}</th>
+    <th>{{"Result" | translate}}</th>
+    <th>{{"Black" | translate}}</th>
     </tr>
 </thead>
 <tbody>

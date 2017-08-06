@@ -28,9 +28,9 @@ let resultController = function ($routeParams, $http, $translate) {
       }, err=>{console.log(err)});
 
       this.$onInit = function () {
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();   
-        }); 
+        // $(document).ready(function(){
+        //   $('[data-toggle="tooltip"]').tooltip();   
+        // }); 
       }
     };
 

@@ -47,5 +47,10 @@
     "Team Points": "Team Points",
     "Team Results": "Team Results",
     "Name": "Name",
-    "Details of points": "Details of points"
+    "Details of points": "Details of points",
+    "Round": "Round",
+
+    "White": "White",
+    "Result": "Result",
+    "Black": "Black"
 }
