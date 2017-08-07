@@ -5,7 +5,11 @@
             <th class="text-center">#</th>
             <th>{{$ctrl.player | translate}}</th>
             <th class="text-center">{{$ctrl.country | translate}}</th>
-            <th class="text-center">{{"Points" | translate}}</th>
+            <th class="text-center">
+                <strong>
+                    {{"Points" | translate}}
+                </strong>
+            </th>
             <th class="text-center" ng-repeat="(i, opp) in $ctrl.players[0].opponentsByRound">{{i + 1}}</th>
         </tr>
         <tr ng-repeat="player in $ctrl.players">
@@ -23,7 +27,11 @@
                     <span class="ct" ng-class="'flag flag-' + $ctrl.mapCountryToCountryCode[player.header.country.name]"></span>
                 </a>
             </td>  
-            <td class="text-nowrap text-center">{{player.points}}</td>  
+            <td class="text-nowrap text-center">
+                <strong>
+                    {{player.points}}
+                </strong>
+            </td>  
             <td class="text-nowrap text-center" ng-repeat="(i, opp) in player.opponentsByRound">
                 <span data-toggle="tooltip" data-placement="bottom"
                     ng-attr-title="{{$ctrl.mapIdToPlayer[opp.opponentId].externalName || 'Opponent'}}">

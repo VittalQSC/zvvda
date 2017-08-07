@@ -16,16 +16,20 @@
 <table class="table table-bordered table-striped table-hover">
     <tr>
         <th class="text-center">{{"Place" | translate}}</th>
-        <th class="text-center">{{$ctrl.player | translate}}</th>
+        <th>{{$ctrl.player | translate}}</th>
         <th class="text-center">{{$ctrl.country | translate}}</th>
 		<th class="text-center">{{"+" | translate}}</th>
         <th class="text-center">{{"=" | translate}}</th>
         <th class="text-center">{{"-" | translate}}</th>        
-        <th class="text-center">{{"Points" | translate}}</th>
+        <th class="text-center">
+            <strong>
+                {{"Points" | translate}}
+            </strong>
+        </th>
     </tr>
     <tr ng-repeat="player in $ctrl.tournaments[$ctrl.activeTournIndex].top3players">
         <td class="text-nowrap text-center">{{player.place}}</td>  
-        <td class="text-nowrap text-center">
+        <td>
             <a ng-href="{{'#!/players/' + player.header.id}}">
                 {{(player.header.surname || '') + " " + (player.header.name || '')}}
             </a>            
@@ -40,7 +44,11 @@
         <td class="text-nowrap text-center">{{player.wins | translate}}</td>  
         <td class="text-nowrap text-center">{{player.draws | translate}}</td>  
         <td class="text-nowrap text-center">{{player.loses | translate}}</td>  
-        <td class="text-nowrap text-center">{{player.points}}</td>  
+        <td class="text-nowrap text-center">
+            <strong>
+                {{player.points}}
+            </strong>
+        </td>  
     </tr>
 </table>
 

@@ -4,7 +4,11 @@
         <tr>
             <th  class="text-center">{{"Place" | translate}}</th>
             <th>{{"Name" | translate}}</th>
-            <th  class="text-center">{{"Points" | translate}}</th>
+            <th  class="text-center">
+                <strong>
+                    {{"Points" | translate}}
+                </strong>
+            </th>
             <th ng-repeat="tourn in $ctrl.maxTourns"  class="text-center">{{tourn.shortName | translate}}</th>
         </tr>
         <tr ng-repeat="team in $ctrl.teams">
