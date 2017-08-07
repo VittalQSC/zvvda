@@ -23,7 +23,6 @@ let previewController = function ($routeParams, $http, $translate, $scope) {
         setInterval(() => {
           $scope.$apply();
           this.tournaments && (this.tournaments = this.tournaments.slice());
-          this.tournaments && console.log(this.activeTournIndex);
           this.tournaments && (this.activeTournIndex = (this.activeTournIndex + 1) % this.tournaments.length);
         }, 5000);
       }

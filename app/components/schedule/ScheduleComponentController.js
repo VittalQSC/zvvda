@@ -57,7 +57,6 @@ let ScheduleComponentController = function ($translate, $http) {
       });
       let today = new Date();
       for (let i = 0; i < eventsObjs.length - 1; i++) {
-        // console.log(eventsObjs);
         if ((new Date(eventsObjs[i+1].date)).getTime() > today.getTime()) {
           this.currEventIndex = i;
           break;

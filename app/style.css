@@ -131,6 +131,11 @@ body {
     pointer-events:none;
 }
 
+.disabled-main-item > * {
+    opacity: 0.3;
+    pointer-events:none;
+}
+
 .time-widget-container {
     float: right;
     margin: 15px;

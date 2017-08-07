@@ -9,7 +9,6 @@ let playerController = function ($http, $translate) {
       this.teamClassifications = [];
       this.countryCode = "";
       this.$onInit = function() {
-        // console.log(this.playerId);
         $http.get(`http://${configs.host}:${configs.port}/players/${this.playerId}`).then(res => {
           this.player = res.data;
           this.tournaments = this.player.tournaments;

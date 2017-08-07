@@ -15,6 +15,7 @@ let resultController = function ($routeParams, $http, $translate) {
       this.players = [];
       $http.get(`http://${configs.host}:${configs.port}/tournaments/` + $routeParams.tournamentId)
       .then(res=>{
+        this.resData = res.data;
         this.players = res.data.players
         this.players.sort((a, b) => a.sortNumber - b.sortNumber)
         this.players.sort((a, b) => a.place - b.place)
