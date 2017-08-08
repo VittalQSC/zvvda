@@ -25,7 +25,6 @@ let resultController = function ($routeParams, $http, $translate) {
           map[player.id] = player;
           return map;
         }, {});
-        // console.log(this.players);
       }, err=>{console.log(err)});
 
       this.$onInit = function () {

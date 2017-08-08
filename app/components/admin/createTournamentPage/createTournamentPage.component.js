@@ -19,7 +19,6 @@ let createTournamentPageController = function ($scope, $http) {
           });
       }
 
-      // console.log('configs',configs);
       this.data = {
         arbiter: null,
         begin: null,

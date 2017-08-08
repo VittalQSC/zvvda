@@ -12,7 +12,6 @@ let CountryComponentController = function ($routeParams, $translate, $http) {
     });
     $http.get(`http://${configs.host}:${configs.port}/countries/${countryId}/players`)
     .then(res => {
-      // console.log('country info', res.data);
       this.results = res.data;
 
     });

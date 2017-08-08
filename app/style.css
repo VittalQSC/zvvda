@@ -168,3 +168,10 @@ body {
     padding: 3px;
     border-radius: 3px;
 }
+
+.home-nav-container {
+    padding: 5px;
+    background: lightgray;
+    border-radius: 3px;
+    margin: 5px 0;
+}

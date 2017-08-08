@@ -54,7 +54,12 @@
     "Result": "Result",
     "Black": "Black",
 
-    "Teams": "Teams"
+    "Teams": "Teams",
+
+    "Main": "Main",
+    "Rapid": "Rapid",
+    "Blitz": "Blitz",
+    "Contents": "Contents"
 
           
 }

@@ -26,7 +26,7 @@ import regulationsRoute from  './routes/regulations.html'
 import adminRoute from  './routes/admin.html'
 import teamsRoute from  './routes/teams.html'
 // import playerRoute from  './routes/admin.html'
-
+import { translationManager } from './utils/';
 import 'angular-translate';
 
 var $injector = angular.injector();
@@ -36,22 +36,21 @@ const app = angular.module('app', ['ngRoute','navbar','schedule', 'country', 'ro
 'resultNavigation', 'details', 'regulations', 'createTournamentPage', '720kb.datepicker']);
 
 app
-.config(['$routeProvider', '$qProvider',function($routeProvider, $qProvider) {
-
+.config(['$translateProvider','$routeProvider', '$qProvider',function($translateProvider, $routeProvider, $qProvider) {
+    translationManager.translateProviderInit($translateProvider);
     $qProvider.errorOnUnhandledRejections(false);
     $routeProvider
     .when("/", {
-        template : homeRoute
+        template : homeRoute,
+        controller: ['$translate', function ($translate) {
+            translationManager.subscribe($translate);
+        }]
     })
     .when("/result", {
         template : resultRoute,
     })
     .when("/teams", {
         template: teamsRoute,
-        // controller: ['$routeParams', function ($routeParams) {
-        //     this.id = $routeParams.id;
-        // }],
-        // controllerAs: 'ctrl'
     })
     .when("/regulations", {
         template : regulationsRoute,

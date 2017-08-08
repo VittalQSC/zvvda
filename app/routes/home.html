@@ -1,11 +1,17 @@
 <greeting></greeting>
+<div class="breadcrumb">
+    <h4>{{"Contents" | translate}}{{': '}}</h4>
+    <a href="#main-1">{{"Main" | translate}}</a> {{' / '}}
+    <a href="#main-2">{{"Rapid" | translate}}</a> {{' / '}}
+    <a href="#main-3">{{"Blitz" | translate}}</a>
+</div>
 <!--<div>
     {{ctrl.locale}}
 </div>-->
 <schedule></schedule>  
-<main-item show-preview="true" group-id="1"></main-item>
-<main-item show-preview="true" group-id="2"></main-item>
-<main-item show-preview="true" group-id="3"></main-item>
+<main-item show-preview="true" group-id="1" id="main-1"></main-item>
+<main-item show-preview="true" group-id="2" id="main-2"></main-item>
+<main-item show-preview="true" group-id="3" id="main-3"></main-item>
 <main-item item-type="'countries'"></main-item>   
 <!--<span class="ct flag flag-cz" ng-src="./../static/flags/flags.png"></span>-->
 <!--<main-item></main-item>

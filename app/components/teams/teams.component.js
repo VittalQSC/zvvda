@@ -4,7 +4,7 @@ import { configs, constants, translationManager } from './../../utils/';
 
 let teamsController = function ($routeParams, $http, $translate) {
   translationManager.subscribe($translate);
-      
+  // console.log('$routeParams.groups',$routeParams.groups);    
   this.mapCountryToCountryCode = constants.mapCountryToCountryCode;
   this.tournNum = 0;
   this.findT = (team, name) => {
