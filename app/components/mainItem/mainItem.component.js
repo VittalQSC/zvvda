@@ -35,7 +35,6 @@ let mainItemController =  function ($routeParams, $http, $translate) {
             window.addEventListener('locale-changed', e => {
               this.header = this.group[constants.mapLang[translationManager.currLocale]]
             })
-            
             itemsUrl = `http://${configs.host}:${configs.port}/tournaments/groups/${groupId}`;
             $http.get(itemsUrl)
             .then(res => {
@@ -50,7 +49,7 @@ let mainItemController =  function ($routeParams, $http, $translate) {
                   showIcon: false,
                   iconSrc: "",
                   className: ``,
-                  href: "#!/result?tournamentId=" + tournament.id + "&groups=" + this.groupId,
+                  href: "#!/result?tournamentId=" + tournament.id + "&groups=" + groupId,
                   text: tournament.shortName,
                   subText:  " " + tournament.currentRound + "/" + tournament.roundAmount
                 };
