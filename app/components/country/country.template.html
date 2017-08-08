@@ -5,7 +5,7 @@
 </h2>
 <div class="country-table-container table-responsive" ng-repeat="tourn in $ctrl.results">
   <h3>
-    <a ng-href="{{'#!/result?tournamentId=' + tourn.id}}">
+    <a ng-href="{{'#!/result?tournamentId=' + tourn.id + '&groups=' + tourn.groupId}}">
       {{tourn.name}}
     </a>
   </h3>
