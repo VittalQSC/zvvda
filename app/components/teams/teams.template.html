@@ -41,7 +41,7 @@
     </h3>
     <div>
         <div ng-repeat="tourn in team.tournaments">
-            <a ng-href="{{'#!/result?tournamentId=' + tourn.id}}">{{tourn.shortName}}</a> 
+            <a ng-href="{{'#!/result?tournamentId=' + tourn.id + '&groups=' + $ctrl.groupId}}">{{tourn.shortName}}</a> 
             :
             <span ng-repeat="(j, player) in tourn.players">
                 {{j !== 0 ? ', ' : ''}}

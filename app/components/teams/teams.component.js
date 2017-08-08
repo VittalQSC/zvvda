@@ -7,6 +7,7 @@ let teamsController = function ($routeParams, $http, $translate) {
   // console.log('$routeParams.groups',$routeParams.groups);    
   this.mapCountryToCountryCode = constants.mapCountryToCountryCode;
   this.tournNum = 0;
+  this.groupId = $routeParams.groups;
   this.findT = (team, name) => {
     if (!team.tournaments) {
       return ;
