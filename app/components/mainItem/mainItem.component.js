@@ -29,6 +29,57 @@ let mainItemController =  function ($routeParams, $http, $translate) {
             });
             break;
         
+
+          case 'solvingContest':
+          this.header = "Международный конкурс по решению шашечных композиций "
+          this.items = [
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1-tIfvpfyu0l2-rV3qWwPcA2SoqUplAdyg-9KguJHvpE/edit?usp=sharing",
+                  text: "12 поз для конкурса",
+                  // subText:  " " + tournament.currentRound + "/" + tournament.roundAmount
+              },
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1Ctv25bCUKX6kyWhUhcP2BNlH7u8uxwUHu25n1urD0-Y/edit?usp=sharing",
+                  text: "Группа 10",                
+              },
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1LNX4-q3_W13qO0cYJNdaZPXVhB3zwDy-2BgjQjaqx64/edit?usp=sharing",
+                  text: "Группа 13",                
+              },
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1A3ZoQZpXajGhhnVEgJ1uWj0zMXDqoF1ZjzwnoqmGH_0/edit?usp=sharing",
+                  text: "Группа 16",                
+              },
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1g3QRKM5-pKYaC5TYbeSZ4YzSM8gVDhAjW-k2p7GbutA/edit?usp=sharing",
+                  text: "Группа 19",                
+              },
+              {
+                  showIcon: false,
+                  iconSrc: "",
+                  className: ``,
+                  href: "https://docs.google.com/document/d/1l_-Q3t0TgN-2G9NNXIWSaI7wt4qY1cpwpGFQh-_yl2A/edit?usp=sharing",
+                  text: "Группа 26+",                
+              },
+              
+          ]
+          break;
+
           default:
             this.status = constants.mapTournamentStatus["FUTURE"];
             this.group = {}; 
